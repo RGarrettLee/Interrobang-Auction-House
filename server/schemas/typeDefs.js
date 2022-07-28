@@ -29,7 +29,7 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!, address: String!,): Auth
     login(email: String!, password: String!): Auth
-    addauctionItem(name: String!, images: String!,closingDate: Integer!,highestBidder: User!):auctionItem
+    addauctionItem(name: String!, images: String!,price:Integer!,closingDate: Integer!,highestBidder: User!):auctionItem
     removeUser(userId: ID!): User
     removeauctionItem(auctionItemId: ID!): auctionItem
   }
