@@ -15,12 +15,12 @@ const auctionItemSchema = new Schema({
     },
 
     closingDate: {
-        type:Integer,
+        type:Number,
         required:true,
     },
 
     price:{
-        type:Integer,
+        type:Number,
         required:true,
     },
 
