@@ -30,6 +30,7 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!, address: String!,): Auth
     login(email: String!, password: String!): Auth
     addAuctionItem(name: String!, images: String!,price:Int!,closingDate: Int!,highestBidder: Int!):auctionItem
+
     removeUser(userId: ID!): User
     removeAuctionItem(auctionItemId: ID!): auctionItem
   }

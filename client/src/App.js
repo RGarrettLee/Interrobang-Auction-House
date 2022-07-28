@@ -1,11 +1,11 @@
 //import logo from './logo.svg';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header, Footer } from './components/common';
-import './App.css';
-import Home from './components/pages/About';
+import "./components/styles/App.css"
+import Home from './components/pages/Home';
 import Dashboard from './components/pages/Dashboard';
-import Contact from './components/pages/Contact';
-import Resume from './components/pages/Resume';
+import Login from './components/pages/Login';
+
 function App() {
   return (
     <Router>
@@ -14,9 +14,9 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Home />} ></Route>
-          <Route path='/portfolio' element={<Dashboard />}></Route>
-          <Route path='/contact' element={<Contact />}></Route>
-          <Route path='/resume' element={<Resume />}></Route>
+          <Route path='/dashboard' element={<Dashboard />}></Route>
+          <Route path='/login' element={<Login />}></Route>
+          
         </Routes>
         <Footer />
       </div>
