@@ -26,7 +26,7 @@ const userSchema = new Schema({
 
     //Do we need to usr the library for it? or should I make the model for it?
     address:{
-    
+    type:String,
     }
 });
 
