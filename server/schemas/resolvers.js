@@ -17,7 +17,7 @@ const resolvers = {
     },
 
     auctionItem: async () => {
-      return aucyion.findOne({_id:auctionItemId});
+      return auctionItem.findOne({_id:auctionItemId});
     },
   },
 
