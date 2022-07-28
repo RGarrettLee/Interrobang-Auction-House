@@ -1,3 +1,4 @@
-const Profile = require('./Profile');
+const User = require('../../../user');
+const AuctionItem = require('../../../auctionItem');
 
-module.exports = { Profile };
+module.exports = {User,AuctionItem};
