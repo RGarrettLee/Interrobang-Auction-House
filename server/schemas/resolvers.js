@@ -9,16 +9,16 @@ const resolvers = {
     },
 
     auctionItem: async () => {
-      return Profile.find();
+      return auctionItem.find();
     },
 
     user: async () => {
       return user.findOne({_id:userId});
     },
 
-    auctionItem: async () => {
-      return auctionItem.findOne({_id:auctionItemId});
-    },
+    // auctionItem: async () => {
+    //   return auctionItem.findOne({_id:auctionItemId});
+    // },
   },
 
   Mutation: {
