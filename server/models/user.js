@@ -27,7 +27,14 @@ const userSchema = new Schema({
     //Do we need to usr the library for it? or should I make the model for it?
     address:{
     type:String,
-    }
+    },
+
+    biddedItems:[
+            {
+            type:Schema.Types.ObjectId,
+            ref:'auctionItem'
+        }
+    ],
 });
 
 userSchema.pre('save', async function (next) {
