@@ -4,11 +4,11 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    users: async () => {
+    user: async () => {
       return user.find();
     },
 
-    auctionItems: async () => {
+    auctionItem: async () => {
       return Profile.find();
     },
 
@@ -22,7 +22,7 @@ const resolvers = {
   },
 
   Mutation: {
-    adduser: async (parent, { name, email, password, address }) => {
+    addUser: async (parent, { name, email, password, address }) => {
 
       const user = user.create({ name,email,password,address });
       const token = signToken(user);
@@ -53,15 +53,15 @@ const resolvers = {
       return { token, user };
     },
 
-    removeuser: async (parent, { profileId }) => {
+    removeUser: async (parent, { profileId }) => {
       return user.findOneAndDelete({ _id: profileId });
     },
 
-    addauctionItem: async (parent,{name, images, closingDate, price, highestBidder})=>{
+    addAuctionItem: async (parent,{name, images, closingDate, price, highestBidder})=>{
       return auctionItem.create({ name, images, closingDate, price, highestBidder});
     },
 
-    removeauctionItem: async(parent,{auctionItemId}) =>{
+    removeAuctionItem: async(parent,{auctionItemId}) =>{
       return auctionItem.findOneAndDelete({_id: auctionItemId})
     },
   },
