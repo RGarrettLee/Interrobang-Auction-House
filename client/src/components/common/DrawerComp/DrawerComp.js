@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import {Button, Drawer, IconButton, List, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import ImageAvatars from '../../ImageAvatars';
-import './DrawerComp.css'
+import '../../styles/DrawerComp.css'
 
 // Setup NavItems
 //  About is not contained in pages as it is the Default Page.
-const PAGES = [ 'Portfolio','Contact', 'Resume'];
+const PAGES = [ 'Dashboard'];
 
 const DrawerComp = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -15,7 +14,6 @@ const DrawerComp = () => {
     <React.Fragment>
       <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
         <List sx={{ padding: '30px' }}>
-          <ImageAvatars />
           <ListItemButton sx={{ textAlign: 'Center' }} onClick={() => setOpenDrawer(false)}>
             <ListItemIcon>
               <ListItemText>
@@ -33,7 +31,7 @@ const DrawerComp = () => {
                   background: isActive ? '#f0f0f0' : '#A6D1E6',
                 })}
                 >
-                 About</NavLink>
+                 Home</NavLink>
               </ListItemText>
             </ListItemIcon>
           </ListItemButton>
@@ -66,7 +64,7 @@ const DrawerComp = () => {
           }
         </List>
       </Drawer>
-      <IconButton sx={{ color: 'white', marginRight: 'auto' }} onClick={() => setOpenDrawer(!openDrawer)}>
+      <IconButton sx={{ color: 'white', marginLeft: 'auto' }} onClick={() => setOpenDrawer(!openDrawer)}>
         <MenuIcon />
       </IconButton>
     </React.Fragment>
