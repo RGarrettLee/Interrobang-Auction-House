@@ -12,9 +12,9 @@ const typeDefs = gql`
   type auctionItem {
     name: String!
     images: String!
-    closingDate:Integer!
-    price: Integer!
-    highestBidder: User!
+    closingDate:Int!
+    price: Int!
+    highestBidder: Int!
   }
 
   type Auth {
@@ -23,15 +23,15 @@ const typeDefs = gql`
   }
 
   type Query {
-    auctionItems:[auctionItem]
-    users:[User]
+    auctionItem:[auctionItem]
+    user:[User]
   }
   type Mutation {
     addUser(username: String!, email: String!, password: String!, address: String!,): Auth
     login(email: String!, password: String!): Auth
-    addauctionItem(name: String!, images: String!,closingDate: Integer!,highestBidder: User!):auctionItem
+    addAuctionItem(name: String!, images: String!,price:Int!,closingDate: Int!,highestBidder: Int!):auctionItem
     removeUser(userId: ID!): User
-    removeauctionItem(auctionItemId: ID!): auctionItem
+    removeAuctionItem(auctionItemId: ID!): auctionItem
   }
 `;
 
