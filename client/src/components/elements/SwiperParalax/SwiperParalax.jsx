@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { QUERY_AUCTION_ITEMS } from '../../../utils/queries';
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -11,6 +13,12 @@ import "./SwiperParalax.css";
 
 // import required modules
 import { Parallax, Pagination, Navigation } from "swiper";
+
+// item information needed
+// title
+// item description
+// 3 slides: item title & lot number | item description | owner / origin
+// 3 columns: countdown timer & closing date | bidding info + increment button | auction house rules
 
 export default function SwiperParalax() {
   return (
@@ -39,7 +47,7 @@ export default function SwiperParalax() {
           data-swiper-parallax="-23%"
         ></div>
         <SwiperSlide>
-          <div className="title" data-swiper-parallax="-300">
+          <div className="title" data-swiper-parallax="-300"> {/* Title | Item Info | Where Its from */}
             Slide 1
           </div>
           <div className="subtitle" data-swiper-parallax="-200">

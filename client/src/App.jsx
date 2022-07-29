@@ -6,6 +6,12 @@ import { Header, Footer } from './components/elements';
 import { Home, Dashboard, ItemDetails } from './components/pages';
 // Stylesheet
 //import "./App.css"
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
 
 //Create MUI Theme
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -27,26 +33,36 @@ const theme = createTheme({
   }
 });
 
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
+const client = new ApolloClient({
+  //link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Router>
+    <ApolloProvider client={client}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Router>
 
-        <div>
-          <Header />
-          <Routes>
-            <Route path='/' element={<Home />} ></Route>
-            <Route path='/dashboard' element={<Dashboard />}></Route>
-            <Route path='/item-details' element={<ItemDetails />}></Route>
+          <div>
+            <Header />
+            <Routes>
+              <Route path='/' element={<Home />} ></Route>
+              <Route path='/dashboard' element={<Dashboard />}></Route>
+              <Route path='/item-details' element={<ItemDetails />}></Route>
 
-          </Routes>
-          <Footer />
-        </div>
-      </Router>
-    </ThemeProvider>
+            </Routes>
+            <Footer />
+          </div>
+        </Router>
+      </ThemeProvider>
+    </ApolloProvider>
   );
 }
 
