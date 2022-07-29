@@ -1,30 +1,30 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { user,auctionItem } = require('../models');
+const { User, AuctionItem } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
     user: async () => {
-      return user.find();
+      return User.find();
     },
 
     auctionItem: async () => {
-      return auctionItem.find();
+      return AuctionItem.find();
     },
 
-    user: async () => {
-      return user.findOne({_id:userId});
+    user: async (parent, { userId }) => {
+      return User.findOne({ _id:userId });
     },
 
-    // auctionItem: async () => {
-    //   return auctionItem.findOne({_id:auctionItemId});
-    // },
+     auctionItem: async (parent, { auctionItemId }) => {
+       return AuctionItem.findOne({_id:auctionItemId});
+     },
   },
 
   Mutation: {
     addUser: async (parent, { name, email, password, address }) => {
 
-      const user = user.create({ name,email,password,address });
+      const user = await User.create({ name,email,password,address });
       const token = signToken(user);
       return {user,token};
     },
@@ -39,7 +39,7 @@ const resolvers = {
       }
 
       // If there is a user found, execute the `isCorrectPassword` instance method and check if the correct password was provided
-      const correctPw = await user.isCorrectPassword(password);
+      const correctPw = await User.isCorrectPassword(password);
 
       // If the password is incorrect, return an Authentication error stating so
       if (!correctPw) {
@@ -54,15 +54,15 @@ const resolvers = {
     },
 
     removeUser: async (parent, { profileId }) => {
-      return user.findOneAndDelete({ _id: profileId });
+      return User.findOneAndDelete({ _id: profileId });
     },
 
-    addAuctionItem: async (parent,{name, images, closingDate, price, highestBidder})=>{
-      return auctionItem.create({ name, images, closingDate, price, highestBidder});
+    addAuctionItem: async (parent,{ name, images, closingDate, price, highestBidder })=>{
+      return AuctionItem.create({ name, images, closingDate, price, highestBidder});
     },
 
-    removeAuctionItem: async(parent,{auctionItemId}) =>{
-      return auctionItem.findOneAndDelete({_id: auctionItemId})
+    removeAuctionItem: async(parent, { auctionItemId }) =>{
+      return AuctionItem.findOneAndDelete({_id: auctionItemId})
     },
   },
 };
