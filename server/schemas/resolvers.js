@@ -16,8 +16,8 @@ const resolvers = {
       return User.findOne({ _id:userId });
     },
 
-    oneAuctionItem: async (parent, { auctionItemId }) => {
-      return AuctionItem.findOne({_id:auctionItemId});
+    oneAuctionItem: async (parent, { name }) => {
+      return AuctionItem.findOne({ name });
     },
   },
 

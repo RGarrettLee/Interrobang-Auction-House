@@ -23,9 +23,9 @@ const typeDefs = gql`
   }
 
   type Query {
-    allAuctionItem:[auctionItem]
+    allAuctionItems:[auctionItem]
     allUsers:[User]
-    oneAuctionItem(_id: String!): auctionItem
+    oneAuctionItem(name: String!): auctionItem
     oneUser(username: String!): User
   }
   type Mutation {
