@@ -6,4 +6,4 @@ const Confirmation = () => {
   )
 }
 
-export default Confirmation
+export default Confirmation;
