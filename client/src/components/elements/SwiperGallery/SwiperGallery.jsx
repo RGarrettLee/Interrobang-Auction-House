@@ -33,7 +33,7 @@ export default function SwiperGallery() {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <NavLink to="/">
+                    <NavLink to="/item-details">
                         <img src="https://swiperjs.com/demos/images/nature-1.jpg" /><br/>TITLE
                     </NavLink>
                 </SwiperSlide>
