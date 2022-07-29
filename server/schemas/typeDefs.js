@@ -23,8 +23,10 @@ const typeDefs = gql`
   }
 
   type Query {
-    auctionItem:[auctionItem]
-    user:[User]
+    allAuctionItems:[auctionItem]
+    allUsers:[User]
+    oneAuctionItem(name: String!): auctionItem
+    oneUser(username: String!): User
   }
   type Mutation {
     addUser(username: String!, email: String!, password: String!, address: String!,): Auth

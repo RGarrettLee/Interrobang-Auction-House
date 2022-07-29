@@ -4,21 +4,21 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    user: async () => {
+    allUsers: async () => {
       return User.find();
     },
 
-    auctionItem: async () => {
+    allAuctionItems: async () => {
       return AuctionItem.find();
     },
 
-    user: async (parent, { userId }) => {
+    oneUser: async (parent, { userId }) => {
       return User.findOne({ _id:userId });
     },
 
-     auctionItem: async (parent, { auctionItemId }) => {
-       return AuctionItem.findOne({_id:auctionItemId});
-     },
+    oneAuctionItem: async (parent, { name }) => {
+      return AuctionItem.findOne({ name });
+    },
   },
 
   Mutation: {
