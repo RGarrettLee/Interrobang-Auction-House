@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Edu+VIC+WA+NT+Beginner&display=swap');
 :root {
   /* Game Styling */
-  --color-Header: #B8DBD9;
-  --color-Body: #F4F4F9;
-  --color-menuBar: #586F7C;
-  --color-Button: #2F4550;
-  --color-Footer: #000000;
+  --color-Header: #F9ECCC !important;
+  --color-Body: #B5DDA4 !important;
+  --color-menuBar: #4DAA57 !important;
+  --color-Button: #587D71 !important;
+  --color-Footer: #754668 !important;
   --color-shadow: hsl(0, 0%, 50%);
 
 }
@@ -26,7 +26,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #1a5bde;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -60,10 +60,10 @@ body {
 }
 
 body {
-  background: var(--color-body);
+  /* background: var(--color-body); */
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
-  color: #000;
+  color: rgb(255, 0, 0);
   margin-top: 100px;
   padding: 0;
 }

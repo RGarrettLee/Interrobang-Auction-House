@@ -1,8 +1,8 @@
 import React from 'react'
-
+import { SwiperParalax } from '../../elements/'
 const ItemDetails = () => {
   return (
-    <div>ItemDetails</div>
+    <div><SwiperParalax/></div>
   )
 }
 
