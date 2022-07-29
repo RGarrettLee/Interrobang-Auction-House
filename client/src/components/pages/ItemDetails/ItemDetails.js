@@ -1,25 +1,54 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
 import { SwiperParalax } from '../../elements/'
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  margin: theme.spacing(2),
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
+
+
+
 const ItemDetails = () => {
   return (
 
     <div>
       <div><SwiperParalax /></div>
-      <div className='d-flex flex-row'>
-        <div className='p-2'>One</div>
-        <div className='p-2'>Two</div>
-        <div className='p-2'><Card>
-          <Card.Header>Featured</Card.Header>
-          <Card.Body>
-            <Card.Title>Special title treatment</Card.Title>
-            <Card.Text>
-              With supporting text below as a natural lead-in to additional content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card></div>
+      <div>
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={3}>
+            <Grid item xs>
+              <Item>
+                Bid Closing<br />
+                Bid Rules<br />
+                Bid Closing<br />
+              </Item>
+            </Grid>
+            <Grid item xs={6}>
+              <Item>
+                Bid Closing<br />
+                Bid Rules<br />
+                Bid Closing<br />
+              </Item>
+            </Grid>
+            <Grid item xs>
+              <Item>
+                Bid Closing<br />
+                Bid Rules<br />
+                Bid Closing<br />
+
+              </Item>
+            </Grid>
+          </Grid>
+        </Box>
+
       </div>
     </div>
 
