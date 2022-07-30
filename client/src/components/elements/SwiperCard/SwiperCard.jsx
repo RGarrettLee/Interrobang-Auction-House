@@ -7,27 +7,29 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-export default function SwiperCard() {
+export default function SwiperCard(props) {
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardMedia
                 component="img"
-                alt="ARTWORK TITLE"
-                 height="140"
-                image="https://swiperjs.com/demos/images/nature-2.jpg"
+                alt={props.title}
+                height="140"
+                image={props.image}
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                    ARTWORK TITLE
+                    {props.title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
-                   Lot#: NUMBER <br/> Bid Closes: CLOSING DATE <br /> Current Bid: VALUE
-                    
+                <Typography variant="body2" color="solids.black">
+                    Lot#: {props.id} <br />
+                    Bid Closes:{props.closingDate}<br />
+                    Current Bid: {props.currentBid}
+
                 </Typography>
             </CardContent>
             <CardActions>
-                <NavLink to="/item-details" color="text.secondary" style={{textDecoration: 'none'}}>
-                    <Button >View Item</Button> 
+                <NavLink to="/item-details" color="secondary.main" style={{ textDecoration: 'none' }}>
+                    <Button >View Item</Button>
                 </NavLink>
             </CardActions>
         </Card>

@@ -25,9 +25,9 @@ function App() {
           <Header />
           <Routes>
             <Route path='/' element={<Home />} ></Route>
-            <Route path='/dashboard' element={<Dashboard />}></Route>
+            <Route path='/my-account' element={<Dashboard />}></Route>
             <Route path='/item-details' element={<ItemDetails />}></Route>
-
+            <Route path='/logout' element={<ItemDetails />}></Route>
           </Routes>
           <Footer />
         </div>

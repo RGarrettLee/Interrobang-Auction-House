@@ -1,14 +1,14 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { AppBar, Toolbar, Typography } from '@mui/material'
-import DrawerComp from '../DrawerComp'
+import DropMenu from '../Menu/Menu'
 
 const Header = () => {
     return (
         <React.Fragment>
             <AppBar >
                 <Toolbar>
-
+                    <DropMenu />
                     <Typography variant="h1" sx={{ fontSize: '32px', paddingLeft: '5%' }}>
                         <NavLink style={({ isActive }) => ({
                             fontFamily: 'Montserrat Alternates',
@@ -20,7 +20,7 @@ const Header = () => {
                             ‽nterrobang Auction House
                         </NavLink>
                     </Typography>
-                    <DrawerComp />
+
                 </Toolbar>
 
             </AppBar>
