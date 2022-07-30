@@ -1,10 +1,10 @@
 const db = require('../config/connection');
-const {user, auctionItem} = require('../models');
+const {User, AuctionItem} = require('../models');
 const auctionItemData = require('./auctionItem.json')
 
 db.once('open', async()=>{
-    auctionItem.deleteMany({});
+   await AuctionItem.deleteMany({});
     
-    const auctionItem = await auctionItem.insertMany(auctionItemData);
+    const auctionItem = await AuctionItem.insertMany(auctionItemData);
     process.exit(0);
 });

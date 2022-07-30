@@ -2,7 +2,14 @@
 
 .footer__social {
     display: flex;
-    justify-content: center ;
+    justify-content: space-around ;
     text-align: center;
+}
+
+.font{
+    font-family: montserrat;
+    color:black;
+    font-size: medium;
+    font-weight: bolder;
 }
 
