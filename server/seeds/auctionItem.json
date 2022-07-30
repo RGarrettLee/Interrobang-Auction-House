@@ -1,9 +1,8 @@
 [
     {
        "name":"the best picture",
-        "images":"thebest.png",
+        "images":"https://c8.alamy.com/comp/GJ32AG/3d-space-coordinate-system-xyz-GJ32AG.jpg",
         "closingDate":"11",
-        "price":"11",
-        "highestBidder":"1"
+        "price":"11"
     }
 ]

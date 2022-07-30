@@ -1,9 +1,12 @@
 const { AuthenticationError } = require('apollo-server-express');
+
 const { User, AuctionItem } = require('../models');
+
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
+
     allUsers: async () => {
       return User.find();
     },
@@ -24,7 +27,9 @@ const resolvers = {
   Mutation: {
     addUser: async (parent, { name, email, password, address }) => {
 
+
       const user = await User.create({ name,email,password,address });
+
       const token = signToken(user);
       return {user,token};
     },
@@ -57,11 +62,13 @@ const resolvers = {
       return User.findOneAndDelete({ _id: profileId });
     },
 
+
     addAuctionItem: async (parent,{ name, images, closingDate, price, highestBidder })=>{
       return AuctionItem.create({ name, images, closingDate, price, highestBidder});
     },
 
     removeAuctionItem: async(parent, { auctionItemId }) =>{
+
       return AuctionItem.findOneAndDelete({_id: auctionItemId})
     },
   },

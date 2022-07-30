@@ -27,6 +27,7 @@ const typeDefs = gql`
     allUsers:[User]
     oneAuctionItem(name: String!): auctionItem
     oneUser(name: String!): User
+
   }
   type Mutation {
     addUser(username: String!, email: String!, password: String!, address: String!,): Auth
