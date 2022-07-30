@@ -1,7 +1,9 @@
 //Common Elements
 import Header from './Header';
 import Footer from './Footer';
+// Menus
 import DrawerComp from './DrawerComp';
+import DropMenu from './Menu';
 
 // Swipers
 import SwiperGallery from './SwiperGallery';
@@ -17,6 +19,7 @@ import NotificationMessage from './NotificationMessage';
 import SwiperCard from './SwiperCard';
 
 
+
 export {
     Header,
     Footer,
@@ -30,4 +33,5 @@ export {
     NotificationMessage,
     SwiperParalax,
     SwiperCard,
+    DropMenu,
 }

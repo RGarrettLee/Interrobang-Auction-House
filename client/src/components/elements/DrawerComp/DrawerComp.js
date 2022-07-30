@@ -6,13 +6,13 @@ import './DrawerComp.css'
 
 // Setup NavItems
 //  About is not contained in pages as it is the Default Page.
-const PAGES = [ 'Dashboard'];
+const PAGES = [ 'Dashboard','Login'];
 
 const DrawerComp = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
   return (
     <React.Fragment>
-      <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
+      <Drawer sx={{ color:'primary.main' }} open={openDrawer} onClose={() => setOpenDrawer(false)}>
         <List sx={{ padding: '30px' }}>
           <ListItemButton sx={{ textAlign: 'Center' }} onClick={() => setOpenDrawer(false)}>
             <ListItemIcon>
