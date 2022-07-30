@@ -1,16 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Edu+VIC+WA+NT+Beginner&display=swap');
 :root {
-  /* Game Styling */
-  --color-Header: #F9ECCC !important;
-  --color-Body: #B5DDA4 !important;
-  --color-menuBar: #4DAA57 !important;
-  --color-Button: #587D71 !important;
-  --color-Footer: #754668 !important;
-  --color-shadow: hsl(0, 0%, 50%);
+
 
 }
 
 body{
   margin-top: 60px;
-  background: var(--color-Body)
+  background-color: ;
 }

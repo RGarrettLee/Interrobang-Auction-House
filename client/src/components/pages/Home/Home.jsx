@@ -4,7 +4,7 @@ import './Home.css'
 
 const Home = () => {
   return (
-    <div><SwiperGallery/></div>
+    <div style={{ margin:'80px' }}><SwiperGallery sx={{}}/></div>
   )
 }
 

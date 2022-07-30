@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { NavLink } from 'react-router-dom';
+import { SwiperCard } from '../index';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -16,7 +16,7 @@ import { EffectCoverflow, Pagination } from "swiper";
 export default function SwiperGallery() {
     return (
         <>
-            <Swiper
+            <Swiper 
                 effect={"coverflow"}
                 grabCursor={true}
                 centeredSlides={true}
@@ -26,16 +26,14 @@ export default function SwiperGallery() {
                     stretch: 0,
                     depth: 100,
                     modifier: 1,
-                    slideShadows: true,
+                    slideShadows: false,
                 }}
                 pagination={true}
                 modules={[EffectCoverflow, Pagination]}
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <NavLink to="/item-details">
-                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" /><br/>TITLE
-                    </NavLink>
+                    <SwiperCard/>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src="https://swiperjs.com/demos/images/nature-2.jpg" />

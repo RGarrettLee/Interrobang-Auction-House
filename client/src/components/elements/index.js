@@ -14,7 +14,7 @@ import BidStatus from './BidStatus';
 import UserDetails from './UserDetails';
 import AuctionItem from './AuctionItem';
 import NotificationMessage from './NotificationMessage';
-
+import SwiperCard from './SwiperCard';
 
 
 export {
@@ -29,4 +29,5 @@ export {
     AuctionItem,
     NotificationMessage,
     SwiperParalax,
+    SwiperCard,
 }

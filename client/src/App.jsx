@@ -8,24 +8,10 @@ import { Home, Dashboard, ItemDetails } from './components/pages';
 //import "./App.css"
 
 //Create MUI Theme
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
-const theme = createTheme({
-  palette: {
-    primary: {
-      light: '#d1b7ad',
-      main: '#a0877e',
-      dark: '#715a52',
-      contrast: '',
-    },
-    secondary: {
-      light: '#ffa270',
-      main: '#ff7043',
-      dark: '#c63f17',
-    }
+import theme from './components/styles/Styles';
 
-  }
-});
 
 
 
