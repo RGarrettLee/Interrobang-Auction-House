@@ -1,30 +1,35 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User,AuctionItem } = require('../models');
+
+const { User, AuctionItem } = require('../models');
+
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    alluser: async () => {
+
+    allUsers: async () => {
       return User.find();
     },
 
-    allauctionItem: async () => {
+    allAuctionItems: async () => {
       return AuctionItem.find();
     },
 
-    oneuser: async () => {
-      return User.findOne({_id:userId});
+    oneUser: async (parent, { name }) => {
+      return User.findOne({ name });
     },
 
-    oneauctionItem: async () => {
-      return AuctionItem.findOne({_id:auctionItemId});
+    oneAuctionItem: async (parent, { name }) => {
+      return AuctionItem.findOne({ name });
     },
   },
 
   Mutation: {
     addUser: async (parent, { name, email, password, address }) => {
 
-      const user = User.create({ name,email,password,address });
+
+      const user = await User.create({ name,email,password,address });
+
       const token = signToken(user);
       return {user,token};
     },
@@ -57,11 +62,13 @@ const resolvers = {
       return User.findOneAndDelete({ _id: profileId });
     },
 
-    addAuctionItem: async (parent,{name, images, closingDate, price, highestBidder})=>{
+
+    addAuctionItem: async (parent,{ name, images, closingDate, price, highestBidder })=>{
       return AuctionItem.create({ name, images, closingDate, price, highestBidder});
     },
 
-    removeAuctionItem: async(parent,{auctionItemId}) =>{
+    removeAuctionItem: async(parent, { auctionItemId }) =>{
+
       return AuctionItem.findOneAndDelete({_id: auctionItemId})
     },
   },
