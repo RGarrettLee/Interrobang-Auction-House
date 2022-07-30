@@ -27,8 +27,8 @@ const DrawerComp = () => {
                   paddingLeft: '50px',
                   paddingRight: '50px',
                   boxShadow: '3px 5px 5px #888888',
-                  color: isActive ? '#000' : '#545e6f',
-                  background: isActive ? '#f0f0f0' : '#A6D1E6',
+                  color: isActive ? 'solids.black' : 'solids.white',
+                  background: isActive ? 'primary.light' : 'primarty.dark',
                 })}
                 >
                  Home</NavLink>
@@ -51,8 +51,8 @@ const DrawerComp = () => {
                       paddingLeft: '50px',
                       paddingRight: '50px',
                       boxShadow: '3px 5px 5px #888888',
-                      color: isActive ? '#000' : '#545e6f',
-                      background: isActive ? '#f0f0f0' : '#A6D1E6',
+                      color: isActive ? 'solids.black' : 'solids.white',
+                      background: isActive ? 'primary.light' : 'primarty.dark',
                     })}
                     >
                       {page}
@@ -71,4 +71,4 @@ const DrawerComp = () => {
   )
 }
 
-export default DrawerComp
+export default DrawerComp;
