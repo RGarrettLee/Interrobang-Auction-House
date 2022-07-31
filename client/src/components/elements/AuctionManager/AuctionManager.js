@@ -9,7 +9,7 @@ const AuctionManager = (props) => {
           <Typography fontFamily="Montserrat Alternates">props.title</Typography>
         </div>
         <div className="col">
-          <Typography >$props.closingDate</Typography>
+          <Typography >props.closingDate</Typography>
         </div>
         <div className="col">
           <Button variant="contained" color="primary">Edit Item</Button>&nbsp;

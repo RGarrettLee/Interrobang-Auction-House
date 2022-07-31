@@ -4,8 +4,8 @@ const Register = () => {
     return (
         <Box className="form" sx={{ marginTop: '80px', padding:'10px', textAlign: "center", flexGrow: 1 }}>
             <Typography fontFamily="Kanit" variant="h3" >Register</Typography><br />
-            <TextField id="FirstName" label="FirstName" variant="filled" /><br /><br />
-            <TextField id="LastName" label="LastName" variant="filled" /><br /><br />
+            <TextField id="FirstName" label="First Name" variant="filled" /><br /><br />
+            <TextField id="LastName" label="Last Name" variant="filled" /><br /><br />
             <TextField id="Email" label="Email" variant="filled" /><br /><br />
             <TextField id="password" label="Password" variant="filled" /><br /><br />
             <TextField id="confirmPassword" label="Confirm Password" variant="filled" />

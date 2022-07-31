@@ -20,7 +20,6 @@ const AddAuctionItem = () => {
         label="Description"
         multiline
         rows={4}
-        defaultValue="Default Value"
         variant="filled"
       />
       <br />
@@ -32,7 +31,6 @@ const AddAuctionItem = () => {
         label="Artist Information"
         multiline
         rows={4}
-        defaultValue="Default Value"
         variant="filled"
       />
       <br />
@@ -41,10 +39,9 @@ const AddAuctionItem = () => {
       <TextField id="slide3subtitle" label="Size of Piece" variant="filled" />
       <TextField
         id="slide3desc"
-        label="Medium"
+        label="Art Medium"
         multiline
         rows={4}
-        defaultValue="Paint style and type"
         variant="filled"
       />
       <br />
@@ -53,11 +50,12 @@ const AddAuctionItem = () => {
       <TextField id="startingBid" label="Opening Bid" variant="filled" />
       <TextField id="currentBid" label="Current Bid Value" variant="filled" />
       <br />
-      <ImageUpload />
-      <TextField id="image" label="image" variant="filled" />
+      <Typography>Image Upload<hr /></Typography>
+      
+      <TextField id="image" label="image" variant="filled" /><ImageUpload />
       <br />
 
-      <Button variant="contained">Create Item</Button>
+      <Button variant="contained" color="secondary">Create Item</Button>
     </Box>
   )
 }
