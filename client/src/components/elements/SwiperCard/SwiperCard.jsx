@@ -17,19 +17,22 @@ export default function SwiperCard(props) {
                 image={props.image}
             />
             <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography fontFamily="Montserrat Alternates" color="primary.dark" gutterBottom variant="h5" component="div">
                     {props.title}
                 </Typography>
-                <Typography variant="body2" color="solids.black">
-                    Lot#: {props.id} <br />
-                    Bid Closes:{props.closingDate}<br />
-                    Current Bid: {props.currentBid}
-
+                <Typography variant="body2" color="primary.dark">
+                    <b>Lot#:</b> {props.id}
+                </Typography>
+                <Typography variant="body2" color="primary.dark">
+                    <b>Current Bid: </b>${props.currentBid}
+                </Typography>
+                <Typography variant="body2" color="primary.dark">
+                    <b>Closing Date:</b> {props.closingDate}
                 </Typography>
             </CardContent>
             <CardActions>
-                <NavLink to="/item-details" color="secondary.main" style={{ textDecoration: 'none' }}>
-                    <Button >View Item</Button>
+                <NavLink to="/item-details" style={{ textDecoration: 'none' }}>
+                    <Button variant="contained" color="secondary">View Item</Button>
                 </NavLink>
             </CardActions>
         </Card>

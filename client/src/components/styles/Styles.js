@@ -33,11 +33,13 @@ const theme = createTheme({
             light: Colors.primary_light,
             main: Colors.primary_main,
             dark: Colors.primary_dark,
+            contrastText: '#ffffff'
         },
         secondary: {
             light: Colors.secondary_light,
             main: Colors.secondary_main,
             dark: Colors.secondary_dark,
+            contrastText: '#ffffff'
         },
         solids: {
             white: Colors.white,
@@ -63,7 +65,7 @@ const theme = createTheme({
 
         },
         Swiper: {
-            marginTop: '150px',
+            marginTop: '50px',
         }
 
     }
