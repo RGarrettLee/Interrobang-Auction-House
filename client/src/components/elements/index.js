@@ -1,6 +1,7 @@
 //Common Elements
 import Header from './Header';
 import Footer from './Footer';
+
 // Menus
 import DrawerComp from './DrawerComp';
 import DropMenu from './Menu';
@@ -8,16 +9,22 @@ import DropMenu from './Menu';
 // Swipers
 import SwiperGallery from './SwiperGallery';
 import SwiperParalax from './SwiperParalax';
+import SwiperCard from './SwiperCard';
 
-//Select Elements
+//Notification Elements
+import NotificationMessage from './NotificationMessage';
+
+// User Elements
+import UserDetails from './UserDetails';
 import BidHistory from './BidHistory';
 import BidIncrement from './BidIncrement';
 import BidStatus from './BidStatus';
-import UserDetails from './UserDetails';
-import AuctionItem from './AuctionItem';
-import NotificationMessage from './NotificationMessage';
-import SwiperCard from './SwiperCard';
+
+//ADMIN Elements
+import AuctionManager from './AuctionManager';
+import AddAuctionItem from './AddAuctionItem';
 import ImageUpload from './ImageUpload';
+import TabPanel from './TabPanel';
 
 
 export {
@@ -29,10 +36,12 @@ export {
     BidIncrement,
     BidStatus,
     UserDetails,
-    AuctionItem,
     NotificationMessage,
     SwiperParalax,
     SwiperCard,
     DropMenu,
     ImageUpload,
+    AddAuctionItem,
+    AuctionManager,
+    TabPanel
 }

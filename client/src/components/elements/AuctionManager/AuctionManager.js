@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, AppBar, Toolbar, Typography } from '@mui/material'
 
-const BidHistory = (props) => {
+const AuctionManager = (props) => {
   return (
     <div className="container">
       <div className="row">
@@ -9,16 +9,16 @@ const BidHistory = (props) => {
           <Typography fontFamily="Montserrat Alternates">props.title</Typography>
         </div>
         <div className="col">
-          <Typography >$props.currentBid</Typography>
+          <Typography >$props.closingDate</Typography>
         </div>
         <div className="col">
-          <Button variant="contained" color="secondary">$100</Button>&nbsp;&nbsp;&nbsp;
-          <Button variant="contained" color="secondary">$200</Button>&nbsp;&nbsp;&nbsp;
-          <Button variant="contained" color="secondary">$300</Button>
+          <Button variant="contained" color="primary">Edit Item</Button>&nbsp;
+          <Button variant="contained" color="primary">Bid Details</Button>&nbsp;
+          <Button variant="contained" color="secondary">$Delete Item</Button>
         </div>
       </div>
     </div>
   )
 }
 
-export default BidHistory
+export default AuctionManager
