@@ -29,6 +29,14 @@ function App() {
             <Route path="/notfound" element={<NotFound />} status={404} />
             <Route path="/register" element={<Register />} />
             <Route path="/admin" element={<Admin />} />
+            
+            {/* <Route
+            path="/orderHistory"
+            element={</>}></Route> */}
+
+            {/* <Route
+            path="/receipt"
+            element={</>}></Route> */}
           </Routes>
           <Footer />
         </div>
