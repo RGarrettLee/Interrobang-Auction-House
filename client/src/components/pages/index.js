@@ -5,6 +5,7 @@ import Home from './Home';
 import ItemDetails from './ItemDetails';
 import NotFound from './NotFound';
 import Register from './Register';
+import Admin from './Admin';
 import Login from './Login';
 
 export {
@@ -15,6 +16,6 @@ export {
     ItemDetails,
     NotFound,
     Register,
-    Login,
-
+    Admin,
+    Login
 }
