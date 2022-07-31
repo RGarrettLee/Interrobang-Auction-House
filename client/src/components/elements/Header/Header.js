@@ -9,7 +9,7 @@ const Header = () => {
             <AppBar >
                 <Toolbar>
                     <DropMenu />
-                    <Typography variant="h1" sx={{ fontSize: '32px', paddingLeft: '5%' }}>
+                    <Typography variant="h1" sx={{ fontSize: '30px', paddingLeft: '5%',  }}>
                         <NavLink style={({ isActive }) => ({
                             fontFamily: 'Montserrat Alternates',
                             fontSize: '32px',

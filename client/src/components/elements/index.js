@@ -17,7 +17,7 @@ import UserDetails from './UserDetails';
 import AuctionItem from './AuctionItem';
 import NotificationMessage from './NotificationMessage';
 import SwiperCard from './SwiperCard';
-
+import ImageUpload from './ImageUpload';
 
 
 export {
@@ -34,4 +34,5 @@ export {
     SwiperParalax,
     SwiperCard,
     DropMenu,
+    ImageUpload,
 }

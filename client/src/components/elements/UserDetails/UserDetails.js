@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, TextField, Paper } from '@mui/material/';
+import { Box, TextField, Paper, Button } from '@mui/material/';
 const UserDetails = () => {
   return (
     <Box
@@ -18,6 +18,7 @@ const UserDetails = () => {
       <TextField id="ZipPostal" label="Zip / Postal" variant="filled" /><br />
       <TextField id="PhoneNumber" label="Phone" variant="filled" /><br />
       <TextField id="Email" label="Email" variant="filled" />
+      <Button variant="contained">Update Account</Button>
     </Box>
   )
 }

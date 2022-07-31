@@ -6,10 +6,19 @@
     text-align: center;
 }
 
-.font{
-    font-family: montserrat;
-    color:black;
-    font-size: medium;
-    font-weight: bolder;
+.footer__logo{
+
 }
 
+.footer__about {
+
+}
+
+.footer__contact{
+
+}
+
+.footer__icons {
+display: flex;
+flex-direction: row;
+}
