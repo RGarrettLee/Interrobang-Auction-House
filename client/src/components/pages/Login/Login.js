@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 // Here we import a helper function that will check if the email is valid
 import { checkPassword, validateEmail } from '../../../utils/helpers';
 
+import { Box, Paper, Grid, styled, Typography } from '@mui/material';
+
 function Login() {
     // Create state variables for the fields in the login
     // We are also setting their initial values to an empty string
@@ -54,7 +56,7 @@ function Login() {
     };
 
     return (
-        <div>
+        <Box sx={{ marginTop:'100px',flexGrow: 1 }}>
             <p>Hello {userName}</p>
             <login className="login">
                 <input
@@ -85,7 +87,7 @@ function Login() {
                     <p className="error-text">{errorMessage}</p>
                 </div>
             )}
-        </div>
+        </Box>
     );
 }
 

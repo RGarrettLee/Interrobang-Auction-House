@@ -75,21 +75,6 @@ export default function DropMenu() {
                     justifyContent: 'center',
                     color: isActive ? '#ff7043' : '#ffa270',
                 })} >Register</NavLink></MenuItem>
-                
-                
-
-
-
-
-
-
-                <MenuItem onClick={handleClose}><NavLink to="/admin" style={({ isActive }) => ({
-                    fontFamily: 'Montserrat Alternates',
-                    fontSize: '20px',
-                    textDecoration: 'none',
-                    justifyContent: 'center',
-                    color: isActive ? '#ff7043' : '#ffa270',
-                })} >Admin</NavLink></MenuItem>
             </Menu>
         </div>
     );

@@ -6,7 +6,7 @@ import ItemDetails from './ItemDetails';
 import NotFound from './NotFound';
 import Register from './Register';
 import Admin from './Admin';
-// import Login from './Login';
+import Login from './Login';
 
 export {
     Checkout,
@@ -16,7 +16,6 @@ export {
     ItemDetails,
     NotFound,
     Register,
-    // Login,
-    Admin
-
+    Admin,
+    Login
 }
