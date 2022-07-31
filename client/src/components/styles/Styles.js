@@ -60,7 +60,10 @@ const theme = createTheme({
         Typography: {
             fontFamily: [
                 'Montserrat Alternates',
-                'Montserrat'
+                'Montserrat',
+                'Roboto',
+                'Rubik',
+                'Kanit'
             ].join(','),
 
         },

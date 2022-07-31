@@ -61,6 +61,20 @@ export default function DropMenu() {
                     justifyContent: 'center',
                     color: isActive ? '#ff7043' : '#ffa270',
                 })} >Logout</NavLink></MenuItem>
+                <MenuItem onClick={handleClose}><NavLink to="/notfound" style={({ isActive }) => ({
+                    fontFamily: 'Montserrat Alternates',
+                    fontSize: '20px',
+                    textDecoration: 'none',
+                    justifyContent: 'center',
+                    color: isActive ? '#ff7043' : '#ffa270',
+                })} >Not Found</NavLink></MenuItem>
+                <MenuItem onClick={handleClose}><NavLink to="/register" style={({ isActive }) => ({
+                    fontFamily: 'Montserrat Alternates',
+                    fontSize: '20px',
+                    textDecoration: 'none',
+                    justifyContent: 'center',
+                    color: isActive ? '#ff7043' : '#ffa270',
+                })} >Register</NavLink></MenuItem>
             </Menu>
         </div>
     );

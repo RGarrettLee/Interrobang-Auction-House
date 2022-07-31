@@ -4,6 +4,7 @@ import Dashboard from './Dashboard';
 import Home from './Home';
 import ItemDetails from './ItemDetails';
 import NotFound from './NotFound';
+import Register from './Register';
 //import Login from './Login';
 
 export {
@@ -13,5 +14,6 @@ export {
     Home,
     ItemDetails,
     NotFound,
+    Register,
 
 }

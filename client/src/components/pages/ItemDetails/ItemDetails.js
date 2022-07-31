@@ -46,13 +46,13 @@ const ItemDetails = () => {
             </Grid>
             <Grid item xs>
               <Item ><Typography variant="h5"><b>Bid Details </b><hr/></Typography>
-                <Typography variant="h5"><b>$</b></Typography><br />
+                <Typography variant="h5"><b>$ </b>VALUE</Typography><br />
                 <Typography align="center">
-                <Button variant="contained">$100</Button>
+                  <Button color="secondary" variant="contained">$100</Button>
                 &nbsp;&nbsp;&nbsp;
-                <Button variant="contained">$200</Button>
+                  <Button color="secondary" variant="contained">$200</Button>
                 &nbsp;&nbsp;&nbsp;
-                  <Button variant="contained">$300</Button>
+                  <Button color="secondary"variant="contained">$300</Button>
                 </Typography>
               </Item>
             </Grid>
