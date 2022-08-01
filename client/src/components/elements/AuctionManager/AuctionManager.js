@@ -14,7 +14,7 @@ const AuctionManager = (props) => {
         <div className="col">
           <Button variant="contained" color="primary">Edit Item</Button>&nbsp;
           <Button variant="contained" color="primary">Bid Details</Button>&nbsp;
-          <Button variant="contained" color="secondary">$Delete Item</Button>
+          <Button variant="contained" color="secondary">Delete Item</Button>
         </div>
       </div>
     </div>
