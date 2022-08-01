@@ -7,14 +7,35 @@ import { Home, Dashboard, ItemDetails, Register, NotFound, Login, Admin } from '
 // Stylesheet
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import "./App.css"
-
+//Appolo Client
+import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink, from } from "@apollo/client";
+import { onError } from '@apollo/client/link/error';
 //Create MUI Theme
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 import theme from './components/styles/Styles';
 
+const errorLink = onError(({ graphqlErrors, networkError }) => {
+  if (graphqlErrors) {
+    graphqlErrors.map(({ message, location, path }) => {
+      alert(`graphql error: ${message}`);
+    });
+  }
+})
+
+const link = from([
+  errorLink, 
+  new HttpLink({uri: "http://localhost:6969/graphql"})
+
+])
+
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link:link
+})
+
 function App() {
-  return (
+  return (<ApolloProvider client={client}>
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
@@ -42,6 +63,7 @@ function App() {
         </div>
       </Router>
     </ThemeProvider>
+  </ApolloProvider>
   );
 }
 
