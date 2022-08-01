@@ -7,34 +7,42 @@ import { Cloudinary } from "@cloudinary/url-gen";
 import { fill } from "@cloudinary/url-gen/actions/resize";
 
 
+
+
 const ImageUpload = () => {
+
+
+
 
     //use state
     const [imageSelected, setImageSelected] = useState('');
+    const [url, setUrl] = useState('');
 
-    const uploadImage = () => {
+    const uploadImage = async () => {
 
         const formData = new FormData()
         formData.append("file", imageSelected)
         formData.append("upload_preset", "okou8sjt")
-        
-        Axios.post("https://api.cloudinary.com/v1_1/dp2yphxuk/image/upload", formData)
-            .then((res) => {
-                console.log(res);
-            });
+        // formData.append("cloud_name", "")
+       await Axios.post("https://api.cloudinary.com/v1_1/dp2yphxuk/image/upload", formData)
+            .then ((res) => {
+                console.log(setUrl(res.data.secure_url))
+            })
+           // .then((formData) => { console.log(formData) }); //setUrl(res.data.secure_url)
+
 
     };
     return (
         <Box  >
             <div className="col">
                 <div>
-                    <Image style={{ width: "200px", borderRadius: "20px", padding: "10px"}} cloudName="dp2yphxuk" publicId="https://res.cloudinary.com/dp2yphxuk/image/upload/v1659322609/vypjlcovhrtt5fbheapj.jpg" />
+                    <Image style={{ width: "200px", borderRadius: "20px", padding: "10px" }} src={url} />
                 </div>
                 <div>
                     <input type="file" onChange={(event) => {
-                    setImageSelected(event.target.files[0])
-                }}
-                />
+                        setImageSelected(event.target.files[0])
+                    }}
+                    />
                 </div>
                 <div>
                     <Button variant="contained" color="secondary" onClick={uploadImage}>
