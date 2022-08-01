@@ -3,6 +3,9 @@ import React from 'react'
 import {Box,Paper,Grid,styled, Button,Typography } from '@mui/material';
 import { SwiperParalax } from '../../elements/'
 
+import { useQuery } from '@apollo/client';
+import { QUERY_AUCTION_ITEMS, QUERY_USERS } from '../../../utils/queries';
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
@@ -13,6 +16,12 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const ItemDetails = () => {
+  const { loading, error, data } = useQuery(QUERY_AUCTION_ITEMS);
+  //console.log(useQuery(QUERY_AUCTION_ITEMS));
+  let items;
+  if (error) console.log(error);
+  loading ? console.log('Loading') : items = data;
+  console.log(items);
   return (
 
     <div>
