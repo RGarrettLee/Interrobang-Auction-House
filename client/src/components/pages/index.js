@@ -1,3 +1,4 @@
+import Cart from './Cart';
 import Checkout from './Checkout';
 import Confirmation from './Confirmation';
 import Dashboard from './Dashboard';
@@ -9,13 +10,15 @@ import Admin from './Admin';
 import Login from './Login';
 
 export {
+    Cart,
     Checkout,
     Confirmation,
-    Dashboard,
     Home,
     ItemDetails,
-    NotFound,
     Register,
+    Login,
+    Dashboard,
     Admin,
-    Login
+    NotFound,
+    
 }
