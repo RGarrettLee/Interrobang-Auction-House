@@ -1,17 +1,26 @@
 [
     {
-        "name": "Garrett",
-        "email": "reginaldgarrettlee@gmail.com",
-        "password": "thisisapassword"
+        "FirstName": "Garrett",
+        "LastName": "Lee",
+        "Email": "reginaldgarrettlee@gmail.com",
+        "Password": "thisisapassword123"
     },
     {
-        "name": "sachmilan",
-        "email": "sachmilansingh@gmail.com",
-        "password": "12345678910"
+        "FirstName": "sachmilan",
+        "LastName": "Singh",
+        "Email": "sachmilansingh@gmail.com",
+        "Password": "12345678910"
     },
     {
-        "name": "Dennis",
-        "email": "dlittlefield@gmail.com",
-        "password": "ilovemydog123"
+        "FirstName": "Dennis",
+        "LastName": "Littlefield",
+        "Email": "dlittlefield@gmail.com",
+        "Password": "ilovemydog123"
+    },
+    {
+        "FirstName": "Sal",
+        "LastName":"Hobbi",
+        "Email": "Sal@gmail.com",
+        "Password":"salisheretohelp"
     }
 ]

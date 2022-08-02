@@ -15,8 +15,8 @@ const resolvers = {
       return AuctionItem.find();
     },
 
-    oneUser: async (parent, { name }) => {
-      return User.findOne({ name });
+    oneUser: async (parent, { Email }) => {
+      return User.findOne({ Email });
     },
 
     oneAuctionItem: async (parent, { name }) => {
@@ -36,7 +36,7 @@ const resolvers = {
 
     login: async (parent, { email, password }) => {
       // Look up the user by the provided email address. Since the `email` field is unique, we know that only one person will exist with that email
-      const user = await User.findOne({ email });
+      const user = await User.findOne({ Email: email  });
 
       // If there is no user with that email address, return an Authentication error stating so
       if (!user) {
@@ -44,7 +44,7 @@ const resolvers = {
       }
 
       // If there is a user found, execute the `isCorrectPassword` instance method and check if the correct password was provided
-      const correctPw = await User.isCorrectPassword(password);
+      const correctPw = await user.isCorrectPassword(password);
 
       // If the password is incorrect, return an Authentication error stating so
       if (!correctPw) {
