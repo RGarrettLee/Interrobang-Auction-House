@@ -4,13 +4,13 @@ import { Button, AppBar, Toolbar, Typography } from '@mui/material'
 const AuctionManager = (props) => {
   const isBidOpen = true;
   return (
-    <div className="container">
+    <div className="container p-2">
       <div className="row">
         <div className="col">
-          <Typography fontFamily="Montserrat Alternates">props.title</Typography>
+          <Typography fontFamily="Montserrat Alternates">{props.title}</Typography>
         </div>
         <div className="col">
-          <Typography >props.closingDate</Typography>
+          <Typography >{props.closingDate}</Typography>
         </div>
         <div className="col">
           {isBidOpen ? (

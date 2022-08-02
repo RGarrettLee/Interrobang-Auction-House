@@ -5,7 +5,7 @@ import { SwiperParalax, BidControls } from '../../elements/'
 
 // use graphql
 import { useQuery } from '@apollo/client';
-import { QUERY_AUCTION_ITEMS, QUERY_AUCTION_ITEM } from '../../../utils/queries';
+import {  QUERY_AUCTION_ITEM } from '../../../utils/queries';
 
 // Get passed in props from link
 import { useLocation } from 'react-router-dom';
@@ -66,7 +66,6 @@ const ItemDetails = () => {
             </Grid>
             <Grid item xs>
               <Item ><Typography variant="h5"><b>Bid Details </b><hr/></Typography>
-                <Typography variant="h5">{/*<BidControls />*/}</Typography>
               </Item>
             </Grid>
           </Grid>
