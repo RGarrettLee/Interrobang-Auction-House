@@ -57,14 +57,14 @@ function App() {
           <div>
             <Header />
             <Routes>
-              <Route path='/' element={<Home />} ></Route>
-              <Route path='/my-account' element={<Dashboard />}></Route>
-              <Route path='/item-details' element={<ItemDetails />}></Route>
-              <Route path='/login' element={<Login />}></Route>
-              <Route path='/logout' element={<ItemDetails />}></Route>
-              <Route path="/e404" element={<NotFound />} status={404} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/admin" element={<Admin />} />
+              <Route exact path='/' element={<Home />} ></Route>
+              <Route exact path='/my-account' element={<Dashboard />}></Route>
+              <Route exact path='/item-details' element={<ItemDetails />}></Route>
+              <Route exact path='/login' element={<Login />}></Route>
+              <Route exact path='/logout' element={<ItemDetails />}></Route>
+              <Route exact path="*" element={<NotFound />} status={404} />
+              <Route exact path="/register" element={<Register />} />
+              <Route exact path="/admin" element={<Admin />} />
             </Routes>
             <Footer />
           </div>

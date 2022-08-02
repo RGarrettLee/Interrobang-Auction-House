@@ -1,18 +1,18 @@
 import React from 'react'
 import { Button, AppBar, Toolbar, Typography } from '@mui/material'
 
-let BidStatus= "WonBid"
-function Component(BidStatus) {
 
+function Component(props) {
+  let BidStatus = "IncreaseBid" //<<<<<<<<<<<<<<<<<<<<<<<<Change to prop when using DB
   switch (BidStatus) {
     case 'WonBid':
-      return <Button color="secondary" variant="contained">Complete Purchase</Button>
+      return <Button color="secondary" variant="contained">Pay Now</Button>
 
     case 'LostBid':
-      return <Typography>Bidding has concluded</Typography>
+      return <Button color="primary" variant="contained">Closed</Button>
 
     case 'IncreaseBid':
-      return <span><Button color="secondary" variant="contained">$100</Button><Button>$100</Button><Button>$100</Button></span>
+      return <span><Button color="secondary" variant="contained">Increase Bid</Button></span>
 
     default:
       return  <Button color="secondary" variant="contained">View Details</Button>
