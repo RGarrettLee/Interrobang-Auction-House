@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 //import './style.css';
 
 // Here we import a helper function that will check if the email is valid
-import { checkPassword, validateEmail } from '../../../utils/helpers';
+import Auth from '../../../utils/auth';
+import { LOGIN_USER } from '../../../utils/mutation';
+
+import { useMutation } from '@apollo/client';
 
 import { Box, Paper, Grid, styled, Typography, Button, TextField } from '@mui/material';
 
@@ -12,6 +15,8 @@ function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+
+    const [loginUser, { error, data }] = useMutation(LOGIN_USER);
 
     const handleInputChange = (e) => {
         // Getting the value and name of the input which triggered the change
@@ -27,29 +32,26 @@ function Login() {
         }
     };
 
-    const handleloginSubmit = (e) => {
-        // Preventing the default behavior of the login submit (which is to refresh the page)
+    const handleloginSubmit = async (e) => {
         e.preventDefault();
 
-        // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
-        if (!validateEmail(email)) {
-            setErrorMessage('Emailor Password is invalid');
-            // We want to exit out of this code block if something is wrong so that the user can correct it
-            return;
-            // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
+        try {
+            const { data } = await loginUser({
+                variables: { email, password }
+            })
+
+            console.log(data);
+
+            Auth.login(data.login.token);
+            alert('Logged in!'); // replace with toaster popup
+            setPassword('');
+            setEmail('');
+        } catch (error) {
+            console.error(error);
+            alert('Failed to log in!'); // replace with toaster pop
         }
-        if (!checkPassword(password)) {
-            setErrorMessage(
-                `Choose a more secure password for the account`
-            );
-            return;
-        }
-        alert(`Hello ${email}`);
 
         // If everything goes according to plan, we want to clear out the input after a successful registration.
-      
-        setPassword('');
-        setEmail('');
     };
 
     return (

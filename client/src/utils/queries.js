@@ -39,7 +39,7 @@ export const QUERY_AUCTION_ITEM = gql`
             lot
         }
     }
-`
+`;
 
 export const UPDATE_USER = gql`
     query UpdateUser {

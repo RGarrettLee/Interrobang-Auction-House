@@ -1,9 +1,9 @@
 [
     {
         "FirstName": "Garrett",
-        "LastName":"Lee",
+        "LastName": "Lee",
         "Email": "reginaldgarrettlee@gmail.com",
-        "Password": "thisisapassword"
+        "Password": "thisisapassword123"
     },
     {
         "FirstName": "Sachmilan",
@@ -13,8 +13,14 @@
     },
     {
         "FirstName": "Dennis",
-        "LastName":"Littlefield",
+        "LastName": "Littlefield",
         "Email": "dlittlefield@gmail.com",
         "Password": "ilovemydog123"
+    },
+    {
+        "FirstName": "Sal",
+        "LastName":"Hobbi",
+        "Email": "Sal@gmail.com",
+        "Password":"salisheretohelp"
     }
 ]
