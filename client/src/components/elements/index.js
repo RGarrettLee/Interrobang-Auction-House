@@ -17,6 +17,7 @@ import NotificationMessage from './NotificationMessage';
 // User Elements
 import UserDetails from './UserDetails';
 import BidHistory from './BidHistory';
+import AugmentBid from './BidHistory';
 import BidIncrement from './BidIncrement';
 import AugmentBid from './BidHistory';
 import BidStatus from './BidStatus';

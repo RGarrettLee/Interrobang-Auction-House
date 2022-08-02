@@ -24,7 +24,6 @@ const AugmentBid = () => {
            date={event}
     renderer={renderer}
   />)
-
 };
 
-export default AugmentBid 
+export default AugmentBid

@@ -23,8 +23,7 @@ const BidControls = () => {
         <Countdown
            date={event}
     renderer={renderer}
-  />)
-
+  />) 
 };
 
-export default BidControls 
+export default BidControls

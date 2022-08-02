@@ -40,3 +40,18 @@ export const QUERY_AUCTION_ITEM = gql`
         }
     }
 `
+
+export const UPDATE_USER = gql`
+    query UpdateUser {
+        user {
+            FirstName
+            LastName
+            Email
+            Password
+            Address
+            City
+            ZipCode
+            Phone
+        }
+    }
+`
