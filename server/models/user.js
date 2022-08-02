@@ -1,4 +1,7 @@
-const {Schema, model} = require('mongoose');
+const {
+    Schema,
+    model
+} = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const userSchema = new Schema({
@@ -61,7 +64,7 @@ const userSchema = new Schema({
 });
 
 userSchema.pre('save', async function (next) {
-    if (this.isNew || this.isModified('Password')) {
+    if (this.isNew || this.isModified('password')) {
         const saltRounds = 10;
         this.Password = await bcrypt.hash(this.Password, saltRounds);
     }

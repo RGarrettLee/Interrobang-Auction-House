@@ -34,3 +34,19 @@ export const ADD_AUCTIONITEM = gql`
     }
   }
 `;
+
+export const UPDATE_USER = gql`
+  mutation updateUser($FirstName:String!, $LastName:String!, $Email:String!, $Password:String!, $Address:String!, $City:String, $Province:String, $ZipCode:String, $Phone:Int){
+    updateUser(FirstName:$FirstName,LastName:$LastName,Email:$Email,Password:$Password,Address:$Address,City:$City,ZipCode:$ZipCode,Phone:$Phone){
+      FirstName
+      LastName
+      Email
+      Password
+      Address
+      City
+      ZipCode
+      Phone
+    }
+  }
+      FirstName
+`
