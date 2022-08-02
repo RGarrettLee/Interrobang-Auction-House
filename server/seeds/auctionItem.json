@@ -2,7 +2,33 @@
     {
        "name":"the best picture",
         "images":"https://c8.alamy.com/comp/GJ32AG/3d-space-coordinate-system-xyz-GJ32AG.jpg",
-        "closingDate":"11",
-        "price":"11"
+        "itemDescription": "this is the best picture ever taken",
+        "artistName": "Garrett",
+        "origin": "Toronto, Canada",
+        "artistInfo": "A full-stack developer who likes taking pictures",
+        "dateProduced": "2022-05-20",
+        "size": "30cm x 30cm",
+        "artMedium": "Photo",
+        "valuation": 500,
+        "openingBid": 100,
+        "currentBidValue": 300,
+        "closingDate": "2022-09-15",
+        "lot": 12
+    },
+    {
+        "name": "surprised pikachu",
+        "images": "https://i.pinimg.com/564x/28/c1/4a/28c14aa8458354a3a03728d3faf1f2a0.jpg",
+        "itemDescription": "a rare photo of surprised fat pikachu",
+        "artistName": "Ken Sugimori",
+        "origin": "Tokyo, Japan",
+        "artistInfo": "One of the creators of the Pokemon franchise",
+        "dateProduced": "1998-05-20",
+        "size": "30cm x 30cm",
+        "artMedium": "Photo",
+        "valuation": 500,
+        "openingBid": 100,
+        "currentBidValue": 300,
+        "closingDate": "2022-09-15",
+        "lot": 12
     }
 ]
