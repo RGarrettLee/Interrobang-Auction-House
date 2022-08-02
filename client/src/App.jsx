@@ -62,7 +62,7 @@ function App() {
               <Route path='/item-details' element={<ItemDetails />}></Route>
               <Route path='/login' element={<Login />}></Route>
               <Route path='/logout' element={<ItemDetails />}></Route>
-              <Route path="/notfound" element={<NotFound />} status={404} />
+              <Route path="/e404" element={<NotFound />} status={404} />
               <Route path="/register" element={<Register />} />
               <Route path="/admin" element={<Admin />} />
             </Routes>

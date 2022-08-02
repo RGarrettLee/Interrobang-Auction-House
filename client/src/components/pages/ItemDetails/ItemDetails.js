@@ -1,7 +1,7 @@
 import React from 'react'
 
 import {Box,Paper,Grid,styled, Button,Typography } from '@mui/material';
-import { SwiperParalax } from '../../elements/'
+import { SwiperParalax, BidControls } from '../../elements/'
 
 import { useQuery } from '@apollo/client';
 import { QUERY_AUCTION_ITEMS, QUERY_USERS } from '../../../utils/queries';
@@ -55,14 +55,7 @@ const ItemDetails = () => {
             </Grid>
             <Grid item xs>
               <Item ><Typography variant="h5"><b>Bid Details </b><hr/></Typography>
-                <Typography variant="h5"><b>$ </b>VALUE</Typography><br />
-                <Typography align="center">
-                  <Button color="secondary" variant="contained">$100</Button>
-                &nbsp;&nbsp;&nbsp;
-                  <Button color="secondary" variant="contained">$200</Button>
-                &nbsp;&nbsp;&nbsp;
-                  <Button color="secondary"variant="contained">$300</Button>
-                </Typography>
+                <Typography variant="h5"><BidControls /></Typography>
               </Item>
             </Grid>
           </Grid>
