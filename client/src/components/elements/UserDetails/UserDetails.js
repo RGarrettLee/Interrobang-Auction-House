@@ -17,7 +17,7 @@ const UserDetails = () => {
       <TextField id="StateProv" label="State / Province" variant="filled" /><br />
       <TextField id="ZipPostal" label="Zip / Postal" variant="filled" /><br />
       <TextField id="PhoneNumber" label="Phone" variant="filled" /><br />
-      <TextField id="Email" label="Email" variant="filled" />
+      <TextField id="Email" label="Email" variant="filled" /><br />
       <Button variant="contained" color="secondary">Update Account</Button>
     </Box>
   )

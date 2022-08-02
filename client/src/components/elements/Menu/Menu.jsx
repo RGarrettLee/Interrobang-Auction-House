@@ -1,13 +1,12 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import { Button, Menu, Typography, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
 
 export default function DropMenu(props) {
     let isLoggedIn = props.isLoggedIn;
+    
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -19,14 +18,15 @@ export default function DropMenu(props) {
 
     return (
         <div>
-            <Button sx={{color: 'solids.white'}}
+
+            <Button sx={{ color: 'solids.white' }}
                 id="demo-positioned-button"
                 aria-controls={open ? 'demo-positioned-menu' : undefined}
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
             >
-                <MenuIcon/>
+                <MenuIcon />
             </Button>
             <Menu
                 id="demo-positioned-menu"
