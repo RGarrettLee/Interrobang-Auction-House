@@ -9,6 +9,9 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "./SwiperGallery.css";
 
+import { useQuery } from '@apollo/client';
+import { QUERY_AUCTION_ITEMS } from '../../../utils/queries';
+
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
 
@@ -114,6 +117,8 @@ const AuctionItems = [
 ];
 
 export default function SwiperGallery() {
+    const { loading, error, data } = useQuery(QUERY_AUCTION_ITEMS);
+    const items = data?.allAuctionItems || [];
     return (
         <>
             <Swiper 
@@ -132,9 +137,9 @@ export default function SwiperGallery() {
                 modules={[EffectCoverflow, Pagination]}
                 className="mySwiper"
             >
-                {AuctionItems.map((item) =>
+                {items.map((item) =>
                 <SwiperSlide>
-                        <SwiperCard id={item.id} image={item.image} title={item.title} closingDate={item.closingDate} currentBid={item.currentBid } />
+                        <SwiperCard id={item.lot} image={item.images} title={item.name} closingDate={item.closingDate} currentBid={item.currentBidValue } />
                 </SwiperSlide>
                 )}
             </Swiper>
