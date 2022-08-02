@@ -48,5 +48,4 @@ export const UPDATE_USER = gql`
       Phone
     }
   }
-      FirstName
 `
