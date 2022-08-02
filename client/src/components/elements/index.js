@@ -19,6 +19,7 @@ import UserDetails from './UserDetails';
 import BidHistory from './BidHistory';
 import AugmentBid from './BidHistory';
 import BidIncrement from './BidIncrement';
+import AugmentBid from './BidHistory';
 import BidStatus from './BidStatus';
 import BidControls from './BidControls';
 

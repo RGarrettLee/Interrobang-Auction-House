@@ -41,17 +41,17 @@ const typeDefs = gql`
     allAuctionItems:[auctionItem]
     allUsers:[User]
     oneAuctionItem(name: String!): auctionItem
-    oneUser(name: String!): User
+    oneUser(email: String!): User
 
   }
   type Mutation {
-    addUser(Firstname: String!,LastName: String!, Email: String!, Password: String!, Address: String!,City: String,Province: String,ZipCode: String,Phone: Int): Auth
+    addUser(FirstName: String!, LastName: String!, Email: String!, Password: String!): Auth
     login(email: String!, password: String!): Auth
     addAuctionItem(name: String!, images: String!,price:Int!,closingDate: Int!,highestBidder: Int!):auctionItem
-# // edit user mutation
     updateUser(FirstName: String!, LastName: String!,Email: String!, Password: String!, Address: String!,City: String!,Province: String!,ZipCode:String,Phone: Int): Auth
     removeUser(userId: ID!): User
     removeAuctionItem(auctionItemId: ID!): auctionItem
+
   }
 `;
 

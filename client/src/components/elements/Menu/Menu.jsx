@@ -53,27 +53,7 @@ export default function DropMenu() {
                     textDecoration: 'none',
                     justifyContent: 'center',
                     color: isActive ? '#ff7043' : '#ffa270',
-                })} >My Account</NavLink></MenuItem> <MenuItem onClick={handleClose}><NavLink to="/admin" style={({ isActive }) => ({
-                    fontFamily: 'Montserrat Alternates',
-                    fontSize: '20px',
-                    textDecoration: 'none',
-                    justifyContent: 'center',
-                    color: isActive ? '#ff7043' : '#ffa270',
-                })} >Admin</NavLink></MenuItem>
-                <MenuItem onClick={handleClose}><NavLink to="/register" style={({ isActive }) => ({
-                    fontFamily: 'Montserrat Alternates',
-                    fontSize: '20px',
-                    textDecoration: 'none',
-                    justifyContent: 'center',
-                    color: isActive ? '#ff7043' : '#ffa270',
-                })} >Register</NavLink></MenuItem>
-                <MenuItem onClick={handleClose}><NavLink to="/login" style={({ isActive }) => ({
-                    fontFamily: 'Montserrat Alternates',
-                    fontSize: '20px',
-                    textDecoration: 'none',
-                    justifyContent: 'center',
-                    color: isActive ? '#ff7043' : '#ffa270',
-                })} >Login</NavLink></MenuItem>
+                })} >My Account</NavLink></MenuItem>
                 <MenuItem onClick={handleClose}><NavLink to="/logout" style={({ isActive }) => ({
                     fontFamily: 'Montserrat Alternates',
                     fontSize: '20px',
@@ -87,7 +67,28 @@ export default function DropMenu() {
                     textDecoration: 'none',
                     justifyContent: 'center',
                     color: isActive ? '#ff7043' : '#ffa270',
-                })} >404 Page Not Found</NavLink></MenuItem>
+                })} >Not Found</NavLink></MenuItem>
+                <MenuItem onClick={handleClose}><NavLink to="/register" style={({ isActive }) => ({
+                    fontFamily: 'Montserrat Alternates',
+                    fontSize: '20px',
+                    textDecoration: 'none',
+                    justifyContent: 'center',
+                    color: isActive ? '#ff7043' : '#ffa270',
+                })} >Register</NavLink></MenuItem>
+                <MenuItem onClick={handleClose}><NavLink to="/admin" style={({ isActive }) => ({
+                    fontFamily: 'Montserrat Alternates',
+                    fontSize: '20px',
+                    textDecoration: 'none',
+                    justifyContent: 'center',
+                    color: isActive ? '#ff7043' : '#ffa270',
+                })} >Admin</NavLink></MenuItem>
+                <MenuItem onClick={handleClose}><NavLink to="/login" style={({ isActive }) => ({
+                    fontFamily: 'Montserrat Alternates',
+                    fontSize: '20px',
+                    textDecoration: 'none',
+                    justifyContent: 'center',
+                    color: isActive ? '#ff7043' : '#ffa270',
+                })} >Login</NavLink></MenuItem>
             </Menu>
         </div>
     );

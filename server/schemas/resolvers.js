@@ -15,8 +15,8 @@ const resolvers = {
       return AuctionItem.find();
     },
 
-    oneUser: async (parent, { name }) => {
-      return User.findOne({ name });
+    oneUser: async (parent, { email }) => {
+      return User.findOne({ email });
     },
 
     oneAuctionItem: async (parent, { name }) => {
@@ -25,10 +25,10 @@ const resolvers = {
   },
 
   Mutation: {
-    addUser: async (parent, { name, email, password, address }) => {
+    addUser: async (parent, { FistName, LastName, Email, Password }) => {
 
 
-      const user = await User.create({ name,email,password,address });
+      const user = await User.create({ FirstName, LastName, Email, Password });
 
       const token = signToken(user);
       return {user,token};
@@ -71,7 +71,6 @@ const resolvers = {
 
       return AuctionItem.findOneAndDelete({_id: auctionItemId})
     },
-    // update user
     updateUser:async (parent,{FirstName, LastName, Email, Password, Address, City, Province, ZipCode, Phone}) =>{
       return User.findOneAndUpdate({FirstName, LastName, Email, Password, Address, City, Province, ZipCode, Phone})
     },

@@ -10,6 +10,7 @@ import { QUERY_AUCTION_ITEMS, QUERY_AUCTION_ITEM } from '../../../utils/queries'
 // Get passed in props from link
 import { useLocation } from 'react-router-dom';
 
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
@@ -63,14 +64,7 @@ const ItemDetails = () => {
             </Grid>
             <Grid item xs>
               <Item ><Typography variant="h5"><b>Bid Details </b><hr/></Typography>
-                <Typography variant="h5"><b>$ </b>{item.currentBidValue}</Typography><br />
-                <Typography align="center">
-                  <Button color="secondary" variant="contained">$100</Button>
-                &nbsp;&nbsp;&nbsp;
-                  <Button color="secondary" variant="contained">$200</Button>
-                &nbsp;&nbsp;&nbsp;
-                  <Button color="secondary"variant="contained">$300</Button>
-                </Typography>
+                <Typography variant="h5">{/*<BidControls />*/}</Typography>
               </Item>
             </Grid>
           </Grid>
