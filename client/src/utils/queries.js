@@ -39,4 +39,4 @@ export const QUERY_AUCTION_ITEM = gql`
             lot
         }
     }
-`
+`;
