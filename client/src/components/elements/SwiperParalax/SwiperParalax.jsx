@@ -59,7 +59,7 @@ export default function SwiperParalax(props) {
             <Typography variant="h2" fontFamily="Montserrat Alternates" color="secondary">By: {props.artistName} </Typography>
           </div>
           <div className="subtitle" data-swiper-parallax="-200">
-            <Typography variant="h6" fontFamily="Roboto" color="secondary">Origin: {props.origin}</Typography>
+            <Typography variant="h6" fontFamily="Roboto" color="secondary">Birthplace: {props.origin}</Typography>
           </div>
           <div className="text" data-swiper-parallax="-100">
             <br></br>
