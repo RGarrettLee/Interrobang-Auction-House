@@ -3,7 +3,7 @@ import Countdown, { zeroPad } from 'react-countdown';
 import { Button, Typography } from '@mui/material';
 
 // set date 
-const event = new Date('2022-08-03T13:30:00'); // <<<<<<<<<<<<<<<<<<<<<<<<<<<Add date from database
+const event = new Date('2022-08-04T13:30:00');
 // Random component
 const Completionist = () => <span>The bidding for this item is now closed</span>;
 
@@ -11,10 +11,10 @@ const Completionist = () => <span>The bidding for this item is now closed</span>
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
         // Render a completed state
-        return <Typography variant="h5"> <Completionist /> </Typography>;
+        return  <Completionist />;
     } else {
         // Render a countdown
-        return <span><b>Bid Closing: </b>{zeroPad(days)}:{zeroPad(hours)}:{zeroPad(minutes)}:{zeroPad(seconds)}<br /><br /><b>$ </b>VALUE<br /><br /><Typography align="center"><Button color="secondary" variant="contained">$100</Button>&nbsp;&nbsp;&nbsp;<Button color="secondary" variant="contained">$200</Button>&nbsp;&nbsp;&nbsp;<Button color="secondary" variant="contained">$300</Button></Typography></span>;
+        return <span>{zeroPad(days)}:{zeroPad(hours)}:{zeroPad(minutes)}:{zeroPad(seconds)}</span>;
     }
 };
 

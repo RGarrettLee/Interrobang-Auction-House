@@ -11,14 +11,15 @@ import "./SwiperParalax.css";
 
 // import required modules
 import { Parallax, Pagination, Navigation } from "swiper";
+import { Typography } from "@mui/material";
 
 export default function SwiperParalax(props) {
   return (
     <>
-      <Swiper
+      <Swiper color="secondary"
         style={{
-          "--swiper-navigation-color": "#fff",
-          "--swiper-pagination-color": "#fff",
+          "--swiper-navigation-color": "#ff7043",
+          "--swiper-pagination-color": "#ff7043",
         }}
         speed={600}
         parallax={true}
@@ -40,14 +41,14 @@ export default function SwiperParalax(props) {
         ></div>
         <SwiperSlide>
           <div className="title" data-swiper-parallax="-300">
-            {props.title}
+            <Typography variant="h2" fontFamily="Montserrat Alternates" color="secondary">{props.title}</Typography>
           </div>
           <div className="subtitle" data-swiper-parallax="-200">
-            Lot #{props.lot}
+            <Typography variant="h6" fontFamily="Roboto" color="secondary">Lot #{props.lot}</Typography>
           </div>
-          <div className="text" data-swiper-parallax="-100">
+          <div className="text" data-swiper-parallax="-100"><br/>
             <p>
-              Dimensions: {props.size}
+              <Typography variant="h5" fontFamily="Roboto" color="secondary">Artist's Description<hr/>{props.itemDescription}</Typography> 
               <br />
               
             </p>
@@ -55,31 +56,31 @@ export default function SwiperParalax(props) {
         </SwiperSlide>
         <SwiperSlide>
           <div className="title" data-swiper-parallax="-300">
-           Artist: {props.artistName}
+            <Typography variant="h2" fontFamily="Montserrat Alternates" color="secondary">By: {props.artistName} </Typography>
           </div>
           <div className="subtitle" data-swiper-parallax="-200">
-            Origin of Piece: {props.origin}
+            <Typography variant="h6" fontFamily="Roboto" color="secondary">Birthplace: {props.origin}</Typography>
           </div>
           <div className="text" data-swiper-parallax="-100">
             <br></br>
-            <h3>
-              About this Item:
-            </h3>
             <p>
-              {props.itemDescription}
-            </p>
+              <Typography variant="h5" fontFamily="Roboto" color="secondary"> About the Artist: <hr />
+              {props.artistInfo}
+            </Typography></p>
+            
+            
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="title" data-swiper-parallax="-300">
-            About the Artist
+            <Typography variant="h2" fontFamily="Montserrat Alternates" color="secondary">{props.artMedium}</Typography>
           </div>
           <div className="subtitle" data-swiper-parallax="-200">
-            Learn more about this talented individual!
+            <Typography variant="h6" fontFamily="Roboto" color="secondary">{props.created}</Typography>
           </div>
           <div className="text" data-swiper-parallax="-100">
             <p>
-              {props.artistInfo}
+              <Typography variant="h6" fontFamily="Roboto" color="secondary">{props.size}</Typography>
             </p>
           </div>
         </SwiperSlide>
