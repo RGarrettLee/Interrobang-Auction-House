@@ -34,7 +34,7 @@ const ItemDetails = () => {
   return (
 
     <div>
-      <div><SwiperParalax title={name} imageUrl={item.images} itemDescription={item.itemDescription} lot={item.lot} size={item.size} artistName={item.artistName} origin={item.origin} artistInfo={item.artistInfo}/></div>
+      <div><SwiperParalax title={name} imageUrl={item.images} itemDescription={item.itemDescription} lot={item.lot} artistName={item.artistName} origin={item.origin} artistInfo={item.artistInfo} itemCreated={item.created} size={item.size} artMedium={item.artMedium } /></div>
       <div>
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={3}>
@@ -50,16 +50,16 @@ const ItemDetails = () => {
             <Grid item xs={6}>
               <Item>
                 <Typography variant="h5"><b>Auction Rules </b><hr /></Typography> {/* replace auction start time, date of event, and auction end time with item data */}
-                1. Bidding begins at [auction start time] on [date of event].<br/> {/* add start date to items */}
-                2. Bidding ends at [auction end time] on {item.closingDate}.<br />
-                3. The auction item value listed is an estimate of fair market value.<br />
-                4. Bidders must use their bidder number in place of their name. Bidder numbers are assigned at the time of registration.<br />
-                5. Bids must meet the minimum increment. Bids that do not meet the minimum will be disqualified.<br />
-                6. Bidders may bid multiple times on the same item, as long as their bid meets the minimum increment.<br />
-                7. The bidder with the highest bid for each item (or the bidder who chooses the “Buy Now” option) agrees to pay the full amount of their bid.<br />
-                8. The bidder with the highest bid for each item (or the bidder who chooses the “Buy Now” option) must pay the full amount of their bid before their item can be retrieved.<br />
-                9. The winning bidder must be present at the event to retrieve their item.<br />
-                10. All sales are final. Exchanges or refunds are not permitted. All items are “as is.” <br />
+                {/* add start date to items */}
+                1. Bidding ends at {item.closingDate}.<br />
+                2. The auction item value listed is an estimate of fair market value.<br />
+                3. Bidders must use their bidder number in place of their name. Bidder numbers are assigned at the time of registration.<br />
+                4. Bids must meet the minimum increment. Bids that do not meet the minimum will be disqualified.<br />
+                5. Bidders may bid multiple times on the same item, as long as their bid meets the minimum increment.<br />
+                6. The bidder with the highest bid for each item (or the bidder who chooses the “Buy Now” option) agrees to pay the full amount of their bid.<br />
+                7. The bidder with the highest bid for each item (or the bidder who chooses the “Buy Now” option) must pay the full amount of their bid before their item can be retrieved.<br />
+                8. The winning bidder must be present at the event to retrieve their item.<br />
+                9. All sales are final. Exchanges or refunds are not permitted. All items are “as is.” <br />
               </Item>
             </Grid>
             <Grid item xs>

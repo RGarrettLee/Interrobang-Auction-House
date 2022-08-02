@@ -1,12 +1,12 @@
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
-const stripe = require('stripe')('sk_test_Hrs6SAopgFPF0bZXSN3f6ELN'); //Stripe
+// const stripe = require('stripe')('sk_test_Hrs6SAopgFPF0bZXSN3f6ELN'); //Stripe
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
-const stripe = require('stripe')('sk_test_Hrs6SAopgFPF0bZXSN3f6ELN'); //Stripe
+// const stripe = require('stripe')('sk_test_Hrs6SAopgFPF0bZXSN3f6ELN'); //Stripe
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -29,24 +29,24 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
-app.post('/create-checkout-session', async (req, res) => { //Stripe
-  const session = await stripe.checkout.sessions.create({
-    line_items: [
-      {
-        // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-        price: '{{PRICE_ID}}',
-        quantity: 1,
-      },
-    ],
-    mode: 'payment',
-    success_url: `${YOUR_DOMAIN}?success=true`,
-    cancel_url: `${YOUR_DOMAIN}?canceled=true`,
-  });
+// app.post('/create-checkout-session', async (req, res) => { //Stripe
+//   const session = await stripe.checkout.sessions.create({
+//     line_items: [
+//       {
+//         // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+//         price: '{{PRICE_ID}}',
+//         quantity: 1,
+//       },
+//     ],
+//     mode: 'payment',
+//     success_url: `${YOUR_DOMAIN}?success=true`,
+//     cancel_url: `${YOUR_DOMAIN}?canceled=true`,
+//   });
 
-  res.redirect(303, session.url);
-});
+//   res.redirect(303, session.url);
+// });
 
-app.listen(4242, () => console.log('Running on port 4242'));
+// app.listen(4242, () => console.log('Running on port 4242'));
 
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {
@@ -61,24 +61,24 @@ const startApolloServer = async (typeDefs, resolvers) => {
   })
   };
 
-  app.post('/create-checkout-session', async (req, res) => { //Stripe
-    const session = await stripe.checkout.sessions.create({
-      line_items: [
-        {
-          // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-          price: '{{PRICE_ID}}',
-          quantity: 1,
-        },
-      ],
-      mode: 'payment',
-      success_url: `${YOUR_DOMAIN}?success=true`,
-      cancel_url: `${YOUR_DOMAIN}?canceled=true`,
-    });
+  // app.post('/create-checkout-session', async (req, res) => { //Stripe
+  //   const session = await stripe.checkout.sessions.create({
+  //     line_items: [
+  //       {
+  //         // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+  //         price: '{{PRICE_ID}}',
+  //         quantity: 1,
+  //       },
+  //     ],
+  //     mode: 'payment',
+  //     success_url: `${YOUR_DOMAIN}?success=true`,
+  //     cancel_url: `${YOUR_DOMAIN}?canceled=true`,
+  //   });
   
-    res.redirect(303, session.url);
-  });
+  //   res.redirect(303, session.url);
+  // });
   
-  app.listen(4242, () => console.log('Running on port 4242'));
+  //app.listen(4242, () => console.log('Running on port 4242'));
   
   // Call the async function to start the server
   startApolloServer(typeDefs, resolvers);
