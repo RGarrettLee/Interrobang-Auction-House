@@ -1,53 +1,79 @@
-const {Schema, model} = require('mongoose');
+const {
+    Schema,
+    model
+} = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const userSchema = new Schema({
-    name:{
-        type:String,
-        required:true,
-        unique:true,
-        trim:true,
+    FirstName: {
+        type: String,
+        required: true,
+        //required:true,
+        unique: true,
+        trim: true,
     },
 
-    email:{
-        type:String,
-        required:true,
+    LastName: {
+        type: String,
+        //required:true,
+        unique: true,
+        trim: true,
+    },
+
+    Email: {
+        type: String,
+        required: true,
         match: [/.+@.+\..+/, 'Must match an email address!'],
-        unique:true,
-        trim:true,
+        unique: true,
+        trim: true,
     },
 
-    password:{
-        type:String,
-        required:true,
-        minLength:5,
+    Password: {
+        type: String,
+        required: true,
+        minLength: 5,
     },
 
 
     //Do we need to usr the library for it? or should I make the model for it?
-    address:{
-    type:String,
+    Address: {
+        type: String,
     },
 
-    biddedItems:[
-            {
-            type:Schema.Types.ObjectId,
-            ref:'auctionItem'
-        }
-    ],
+    City: {
+        type: String,
+    },
+
+    Province: {
+        type: String,
+    },
+
+    ZipCode: {
+        type: String,
+    },
+
+    Phone: {
+        type: Number,
+    },
+
+
+    biddedItems: [{
+        type: Schema.Types.ObjectId,
+        ref: 'auctionItem'
+    }],
 });
 
 userSchema.pre('save', async function (next) {
     if (this.isNew || this.isModified('password')) {
-      const saltRounds = 10;
-      this.password = await bcrypt.hash(this.password, saltRounds);
+        const saltRounds = 10;
+        this.Password = await bcrypt.hash(this.Password, saltRounds);
     }
-  
+
     next();
-  });
+});
 
 userSchema.methods.isCorrectPassword = async function (password) {
-return bcrypt.compare(password, this.password);
+    return bcrypt.compare(password, this.Password);
 };
 
 const User = model('User', userSchema);

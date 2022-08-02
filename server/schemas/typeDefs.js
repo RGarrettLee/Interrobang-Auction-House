@@ -3,10 +3,15 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
   type User {
     _id: ID
-    name: String!
-    email: String!
-    password: String!
-    address: String!
+    FirstName: String!
+    LastName: String!
+    Email: String!
+    Password: String!
+    Address: String!
+    City: String
+    Province: String
+    ZipCode: String
+    Phone: Int
   }
 
   type auctionItem {
@@ -36,16 +41,17 @@ const typeDefs = gql`
     allAuctionItems:[auctionItem]
     allUsers:[User]
     oneAuctionItem(name: String!): auctionItem
-    oneUser(name: String!): User
+    oneUser(email: String!): User
 
   }
   type Mutation {
-    addUser(username: String!, email: String!, password: String!, address: String!,): Auth
+    addUser(FirstName: String!, LastName: String!, Email: String!, Password: String!): Auth
     login(email: String!, password: String!): Auth
     addAuctionItem(name: String!, images: String!,price:Int!,closingDate: Int!,highestBidder: Int!):auctionItem
-
+    updateUser(FirstName: String!, LastName: String!,Email: String!, Password: String!, Address: String!,City: String!,Province: String!,ZipCode:String,Phone: Int): Auth
     removeUser(userId: ID!): User
     removeAuctionItem(auctionItemId: ID!): auctionItem
+
   }
 `;
 

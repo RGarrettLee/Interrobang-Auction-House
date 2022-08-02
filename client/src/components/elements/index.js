@@ -18,7 +18,9 @@ import NotificationMessage from './NotificationMessage';
 import UserDetails from './UserDetails';
 import BidHistory from './BidHistory';
 import BidIncrement from './BidIncrement';
+import AugmentBid from './BidHistory';
 import BidStatus from './BidStatus';
+import BidControls from './BidControls';
 
 //ADMIN Elements
 import AuctionManager from './AuctionManager';
@@ -43,5 +45,7 @@ export {
     ImageUpload,
     AddAuctionItem,
     AuctionManager,
-    TabPanel
+    TabPanel,
+    BidControls,
+    AugmentBid
 }

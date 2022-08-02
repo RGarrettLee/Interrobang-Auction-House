@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, TextField, Button, Typography } from '@mui/material';
+import { Box, TextField, Button, Typography, Stack } from '@mui/material';
 import { ImageUpload } from '../index'
 import PropTypes from 'prop-types';
 import { flexbox } from '@mui/system';
@@ -52,8 +52,8 @@ const AddAuctionItem = () => {
       autoComplete="off"
     >
       <Typography>Artwork Details<hr /></Typography><br />
-      <TextField id="id" label="Lot Number" variant="filled"  />
-      <TextField id="Artwork Title" label="title" variant="filled" />
+      <TextField id="ArtworkTitle" label="Artwork Title" variant="filled" />
+      <TextField id="ClosingDate" label="Bid Closing Date" variant="filled"  />
       <TextField
         id="slide1desc"
         label="Description"

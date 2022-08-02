@@ -61,7 +61,7 @@ export default function DropMenu() {
                     justifyContent: 'center',
                     color: isActive ? '#ff7043' : '#ffa270',
                 })} >Logout</NavLink></MenuItem>
-                <MenuItem onClick={handleClose}><NavLink to="/notfound" style={({ isActive }) => ({
+                <MenuItem onClick={handleClose}><NavLink to="/e404" style={({ isActive }) => ({
                     fontFamily: 'Montserrat Alternates',
                     fontSize: '20px',
                     textDecoration: 'none',
