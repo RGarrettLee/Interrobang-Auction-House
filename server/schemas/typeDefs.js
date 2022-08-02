@@ -12,9 +12,19 @@ const typeDefs = gql`
   type auctionItem {
     name: String!
     images: String!
-    closingDate:Int!
-    price: Int!
-    highestBidder: Int!
+    itemDescription: String!
+    artistName: String!
+    origin: String!
+    artistInfo: String!
+    dateProduced: String!
+    size: String!
+    artMedium: String!
+    valuation: Int!
+    openingBid: Int!
+    currentBidValue: Int!
+    closingDate:String!
+    lot: Int!
+    highestBidder: User
   }
 
   type Auth {
