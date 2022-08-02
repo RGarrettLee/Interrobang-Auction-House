@@ -14,16 +14,57 @@ const auctionItemSchema = new Schema({
         required:true,
     },
 
+    itemDescription: {
+        type: String,
+        required: true,
+    },
+
+    artistName: {
+        type: String,
+        required: true
+    },
+
+    origin: {
+        type: String,
+        required: true
+    },
+
+    artistInfo: {
+        type: String
+    },
+
+    dateProduced: {
+        type: String // change to date type
+    },
+
+    size: {
+        type: String
+    },
+
+    artMedium: {
+        type: String
+    },
+
+    valuation: {
+        type: Number
+    },
+
+    openingBid: {
+        type: Number
+    },
+
+    currentBidValue: {
+        type: Number
+    },
+
     closingDate: {
-        type:Number,
+        type: String,
         required:true,
     },
 
-    price:{
-        type:Number,
-        required:true,
+    lot: {
+        type: Number
     },
-
 
     // Do we need an array here, as I am thnking there will be only one highest bidder, so I do not think that we need an array here.
     highestBidder:{
