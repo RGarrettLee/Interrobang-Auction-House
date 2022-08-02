@@ -4,10 +4,9 @@ import { Button, Menu, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
 
-
 export default function DropMenu(props) {
-    const isLoggedIn = props.isLoggedIn
-
+    let isLoggedIn = props.isLoggedIn;
+    
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {

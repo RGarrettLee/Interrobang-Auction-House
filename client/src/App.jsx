@@ -57,7 +57,7 @@ function App() {
           <div>
             <Header />
             <Routes>
-              <Route exact path='/' element={<Home />} ></Route>
+            <Route exact path='/' element={<Home />} ></Route>
               <Route exact path='/my-account' element={<Dashboard />}></Route>
               <Route exact path='/item-details' element={<ItemDetails />}></Route>
               <Route exact path='/login' element={<Login />}></Route>

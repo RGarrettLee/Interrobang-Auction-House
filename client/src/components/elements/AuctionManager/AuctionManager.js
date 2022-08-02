@@ -13,7 +13,7 @@ const AuctionManager = (props) => {
           <Typography >{props.closingDate}</Typography>
         </div>
         <div className="col">
-          {isBidOpen ? (
+        {isBidOpen ? (
             <span>
             <Button variant="contained" color="primary">Edit Item</Button>&nbsp;
             <Button variant="contained" color="secondary">Delete Item</Button>
@@ -24,9 +24,6 @@ const AuctionManager = (props) => {
             <Button variant="contained" color="secondary">Delete Item</Button>
             </span>
           )}
-          
-          
-          
         </div>
       </div>
     </div>
