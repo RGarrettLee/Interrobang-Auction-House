@@ -71,6 +71,10 @@ const resolvers = {
 
       return AuctionItem.findOneAndDelete({_id: auctionItemId})
     },
+    // update user
+    updateUser:async (parent,{FirstName, LastName, Email, Password, Address, City, Province, ZipCode, Phone}) =>{
+      return User.findOneAndUpdate({FirstName, LastName, Email, Password, Address, City, Province, ZipCode, Phone})
+    },
   },
 };
 
