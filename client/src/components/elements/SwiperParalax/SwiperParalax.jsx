@@ -12,7 +12,7 @@ import "./SwiperParalax.css";
 // import required modules
 import { Parallax, Pagination, Navigation } from "swiper";
 
-export default function SwiperParalax() {
+export default function SwiperParalax(props) {
   return (
     <>
       <Swiper
@@ -33,21 +33,21 @@ export default function SwiperParalax() {
           slot="container-start"
           className="parallax-bg"
           style={{
-            "background-image":
-              "url(https://swiperjs.com/demos/images/nature-1.jpg)",
+            "backgroundImage":
+              `url(${props.imageUrl})`,
           }}
           data-swiper-parallax="-23%"
         ></div>
         <SwiperSlide>
           <div className="title" data-swiper-parallax="-300">
-            Artwork Title
+            {props.title}
           </div>
           <div className="subtitle" data-swiper-parallax="-200">
-            Lot#
+            Lot #{props.lot}
           </div>
           <div className="text" data-swiper-parallax="-100">
             <p>
-              Dimensions
+              Dimensions: {props.size}
               <br />
               
             </p>
@@ -55,20 +55,18 @@ export default function SwiperParalax() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="title" data-swiper-parallax="-300">
-           Artist Name
+           Artist: {props.artistName}
           </div>
           <div className="subtitle" data-swiper-parallax="-200">
-            City of Origin
+            Origin of Piece: {props.origin}
           </div>
           <div className="text" data-swiper-parallax="-100">
+            <br></br>
+            <h3>
+              About this Item:
+            </h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+              {props.itemDescription}
             </p>
           </div>
         </SwiperSlide>
