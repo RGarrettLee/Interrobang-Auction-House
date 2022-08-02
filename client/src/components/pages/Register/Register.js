@@ -3,7 +3,7 @@ import { Box, Typography, Button, TextField } from '@mui/material';
 const Register = () => {
     return (
         <Box className="form" sx={{ marginTop: '80px', padding:'10px', textAlign: "center", flexGrow: 1 }}>
-            <Typography fontFamily="Kanit" variant="h3" >Register</Typography><br />
+            <Typography fontFamily="Montserrat Alternates" variant="h3" >Register</Typography><br />
             <TextField margin="dense" id="FirstName" label="First Name" variant="filled" /><br />
             <TextField margin="dense" id="LastName" label="Last Name" variant="filled" /><br />
             <TextField margin="dense" id="Email" label="Email" variant="filled" /><br />

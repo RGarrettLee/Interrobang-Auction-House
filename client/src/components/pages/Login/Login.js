@@ -54,7 +54,7 @@ function Login() {
 
     return (
         <Box sx={{ marginTop: '80px', padding: '10px', textAlign: "center", flexGrow: 1 }}>
-            <Typography fontFamily="Kanit" variant="h3" >Login</Typography><br />
+            <Typography fontFamily="Montserrat Alternates" variant="h3" >Login</Typography><br />
             <login className="login">
                 <TextField
                     variant="filled"

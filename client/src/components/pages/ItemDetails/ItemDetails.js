@@ -1,7 +1,7 @@
 import React from 'react'
 
 import {Box,Paper,Grid,styled, Button,Typography } from '@mui/material';
-import { SwiperParalax } from '../../elements/'
+import { SwiperParalax, BidControls } from '../../elements/'
 
 // use graphql
 import { useQuery } from '@apollo/client';
