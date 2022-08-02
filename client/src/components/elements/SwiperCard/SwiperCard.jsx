@@ -31,7 +31,7 @@ export default function SwiperCard(props) {
                 </Typography>
             </CardContent>
             <CardActions>
-                <NavLink to="/item-details" style={{ textDecoration: 'none' }}>
+                <NavLink to={{ pathname: "/item-details" }} state={{ title: props.title }} style={{ textDecoration: 'none' }}>
                     <Button fontFamily="Roboto" variant="contained" color="secondary">View Item</Button>
                 </NavLink>
             </CardActions>
