@@ -39,7 +39,7 @@ export const QUERY_AUCTION_ITEM = gql`
             lot
         }
     }
-`
+`;
 
 export const UPDATE_USER = gql`
     query UpdateUser {
@@ -52,14 +52,6 @@ export const UPDATE_USER = gql`
             City
             ZipCode
             Phone
-        }
-    }
-`
-
-export const BIDDED_ITEM = gql`
-    query biddedItem{
-        biddedItem{
-            auctionItemId
         }
     }
 `

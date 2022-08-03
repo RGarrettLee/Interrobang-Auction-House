@@ -1,7 +1,8 @@
 import React from 'react'
 import { UserDetails, BidHistory } from '../../elements/index';
 import { Box, Paper, Grid, styled, Typography } from '@mui/material';
-
+import { useQuery } from '@apollo/client';
+import { QUERY_AUCTION_ITEMS } from '../../../utils/queries';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -14,6 +15,8 @@ const Item = styled(Paper)(({ theme }) => ({
 
 
 const Dashboard = () => {
+  const { loading, error, data } = useQuery(QUERY_AUCTION_ITEMS);
+  const items = data?.allAuctionItems || [];
   return (
     <Box sx={{ marginTop:'50px',flexGrow: 1 }}>
           <Grid container spacing={1}>
@@ -24,7 +27,9 @@ const Dashboard = () => {
             </Grid>
             <Grid item xs={8}>
           <Item><Typography variant="h5" fontFamily="Montserrat Alternates">Auction Manager<hr/></Typography>
-            <Typography variant="body2" ><BidHistory/></Typography>
+            <Typography variant="body2" >
+              {items.map((item) => <BidHistory />)}
+            </Typography>
           </Item>
             </Grid>
            

@@ -35,8 +35,6 @@ export {
     DrawerComp,
     SwiperGallery,
     BidHistory,
-    BidIncrement,
-    BidStatus,
     UserDetails,
     NotificationMessage,
     SwiperParalax,
@@ -46,6 +44,8 @@ export {
     AddAuctionItem,
     AuctionManager,
     TabPanel,
-    BidControls,
-    AugmentBid
+    AugmentBid,
+    BidIncrement,
+    BidStatus,
+    BidControls
 }

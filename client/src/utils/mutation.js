@@ -5,8 +5,7 @@ export const LOGIN_USER = gql`
     login(email: $email, password: $password) {
       token
       user {
-        _id
-        username
+        Email
       }
     }
   }
@@ -46,14 +45,6 @@ export const UPDATE_USER = gql`
       City
       ZipCode
       Phone
-    }
-  }
-`
-
-export const BIDDED_ITEM = gql`
-  mutation biddedItem($auctionItemId:ID){
-    biddedItem(auctionItemId:$auctionItemId){
-      auctionItemID
     }
   }
 `
