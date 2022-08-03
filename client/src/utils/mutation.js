@@ -12,15 +12,14 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_USER = gql`
-  mutation adduser($name: String!, $email: String!, $password: String!, $address:string!){
-    adduser(name: $name, email: $email, password:$password, address:$address) {
-      _id
-      name
-      email
-      password
-      address
+  mutation AddUser($email: String!, $password: String!) {
+    addUser(Email: $email, Password: $password) {
+      user {
+        Email
+        Password
       }
     }
+  }
 `;
 
 export const ADD_AUCTIONITEM = gql`
