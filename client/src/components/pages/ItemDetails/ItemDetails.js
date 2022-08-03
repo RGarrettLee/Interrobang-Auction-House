@@ -1,6 +1,6 @@
-import React from 'react'
+import { React, useState } from 'react'
 
-import { Box, Paper, Grid, styled, Button, Typography } from '@mui/material';
+import { Box, Paper, Grid, styled, Button, TextField, Typography } from '@mui/material';
 import { SwiperParalax } from '../../elements/'
 
 // use graphql
@@ -13,7 +13,8 @@ import Countdown, { zeroPad } from 'react-countdown';
 import { useLocation } from 'react-router-dom';
 
 
-let isBidOpen
+
+let isBidClosed
 //Table Columns
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -25,7 +26,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const ItemDetails = () => {
-  
+
 
   let location = useLocation();
   const name = location.state.title;
@@ -37,6 +38,8 @@ const ItemDetails = () => {
   if (error) console.log(error);
   loading ? console.log('Loading') : console.log(item);
 
+
+
   //Countdown timer
   // set date 
   const event = new Date(item.closingDate);
@@ -46,16 +49,20 @@ const ItemDetails = () => {
   // Renderer callback with condition
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
-      isBidOpen = false;
-      console.log(completed + " " + isBidOpen)
+      isBidClosed = true;
+      console.log(completed + " " + isBidClosed)
       // Render a completed state
       return <Completionist />;
     } else {
-      isBidOpen = true;
+
       // Render a countdown
       return <div>{zeroPad(days)}:{zeroPad(hours)}:{zeroPad(minutes)}:{zeroPad(seconds)}</div>;
     }
   };
+
+
+
+
 
   return (
 
@@ -94,29 +101,20 @@ const ItemDetails = () => {
               <Item >
                 <Typography variant="h5" align="center"><b>Bid Closing </b><hr />
                   <Countdown
-                    date={Date.now() + 5000}  //<<<<<<<<<<<<<<<< CHANGE TO {event}
+                    date={Date.now() + 5000}  //<<<<<<<<<<<<<<<< CHANGE Between {event} ||  for testing
                     renderer={renderer}
+
                   />
 
                 </Typography>
               </Item>
-
-              {isBidOpen ? (
-               
-                null
-              ) : (
-                <Item>
-                  <Typography align="center">
-                    <Typography variant="h5"><b>Current Value </b><hr /></Typography>
-                    <Typography variant="h5"><b>$ {item.currentBidValue}.00 </b><hr /></Typography>
-                    <Button color="secondary" variant="contained">$100</Button>&nbsp;&nbsp;&nbsp;
-                    <Button color="secondary" variant="contained">$200</Button>&nbsp;&nbsp;&nbsp;
-                    <Button color="secondary" variant="contained">$300</Button>
-                  </Typography>
-                </Item>
-              
-                
-              )}
+              <Item>
+                <Typography align="center">
+                  <Typography variant="h5" ><b>Current Value </b><hr /></Typography>
+                  <Typography variant="h5"><b>$ {item.currentBidValue} </b><hr /></Typography>
+                  <TextField id="placeBid" label="$ Place Bid" variant="filled" />
+                </Typography>
+              </Item>
 
 
             </Grid>
