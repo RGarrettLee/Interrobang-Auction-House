@@ -9,7 +9,7 @@ import { fill } from "@cloudinary/url-gen/actions/resize";
 
 
 
-const ImageUpload = () => {
+const ImageUpload = (props) => {
 
 
 
@@ -27,6 +27,7 @@ const ImageUpload = () => {
        await Axios.post("https://api.cloudinary.com/v1_1/dp2yphxuk/image/upload", formData)
             .then ((res) => {
                 console.log(setUrl(res.data.secure_url))
+                props.setState({...props.state, 'images': url});
             })
            // .then((formData) => { console.log(formData) }); //setUrl(res.data.secure_url)
 
