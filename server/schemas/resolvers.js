@@ -63,8 +63,9 @@ const resolvers = {
     },
 
 
-    addAuctionItem: async (parent,{ name, images, itemDescription, artistName, origin, artistInfo, dateProduced, size, artMedium, valuation, openingBid, currentBidValue,closingDate, lot, highestBidder })=>{
-      return AuctionItem.create({ name, images, itemDescription, artistName, origin, artistInfo, dateProduced, size, artMedium, valuation, openingBid, currentBidValue,closingDate, lot, highestBidder });
+    addAuctionItem: async (parent,{ name, images, itemDescription, artistName, origin, artistInfo, dateProduced, size, artMedium, valuation, openingBid,closingDate, lot })=>{
+      const currentBidValue = openingBid;
+      return AuctionItem.create({ name, images, itemDescription, artistName, origin, artistInfo, dateProduced, size, artMedium, valuation, openingBid, currentBidValue,closingDate, lot });
     },
 
     removeAuctionItem: async(parent, { auctionItemId }) =>{
