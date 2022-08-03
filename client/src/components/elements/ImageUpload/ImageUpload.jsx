@@ -33,7 +33,7 @@ const ImageUpload = () => {
 
     };
     return (
-        <Box  >
+        <Box className="text-center justify-center p-2">
             <div className="col">
                 <div>
                     <Image style={{ width: "200px", borderRadius: "20px", padding: "10px" }} src={url} />
@@ -44,8 +44,8 @@ const ImageUpload = () => {
                     }}
                     />
                 </div>
-                <div>
-                    <Button variant="contained" color="secondary" onClick={uploadImage}>
+                <div className="text-center justify-center p-2">
+                    <Button  variant="contained" color="secondary" onClick={uploadImage}>
                         Upload Image
                     </Button>
                 </div>

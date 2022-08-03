@@ -18,9 +18,7 @@ import NotificationMessage from './NotificationMessage';
 import UserDetails from './UserDetails';
 import BidHistory from './BidHistory';
 import AugmentBid from './BidHistory';
-import BidIncrement from './BidIncrement';
-import BidStatus from './BidStatus';
-import BidControls from './BidControls';
+
 
 //ADMIN Elements
 import AuctionManager from './AuctionManager';
@@ -35,8 +33,6 @@ export {
     DrawerComp,
     SwiperGallery,
     BidHistory,
-    BidIncrement,
-    BidStatus,
     UserDetails,
     NotificationMessage,
     SwiperParalax,
@@ -46,6 +42,5 @@ export {
     AddAuctionItem,
     AuctionManager,
     TabPanel,
-    BidControls,
     AugmentBid
 }
