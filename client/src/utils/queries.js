@@ -55,3 +55,11 @@ export const UPDATE_USER = gql`
         }
     }
 `
+
+export const BIDDED_ITEM = gql`
+    query biddedItem{
+        biddedItem{
+            auctionItemId
+        }
+    }
+`

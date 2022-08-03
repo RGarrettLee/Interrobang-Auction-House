@@ -8,7 +8,7 @@ const resolvers = {
   Query: {
 
     allUsers: async () => {
-      return User.find();
+      return User.find().populate('auctionItem');
     },
 
     allAuctionItems: async () => {
@@ -25,9 +25,9 @@ const resolvers = {
   },
 
   Mutation: {
-    addUser: async (parent, { FistName, LastName, Email, Password }) => {
+    addUser: async (parent, { FirstName, LastName, Email, Password }) => {
 
-
+      console.log("creating");
       const user = await User.create({ FirstName, LastName, Email, Password });
 
       const token = signToken(user);
@@ -63,8 +63,8 @@ const resolvers = {
     },
 
 
-    addAuctionItem: async (parent,{ name, images, closingDate, price, highestBidder })=>{
-      return AuctionItem.create({ name, images, closingDate, price, highestBidder});
+    addAuctionItem: async (parent,{ name, images, itemDescription, artistName, origin, artistInfo, dateProduced, size, artMedium, valuation, openingBid, currentBidValue,closingDate, lot, highestBidder })=>{
+      return AuctionItem.create({ name, images, itemDescription, artistName, origin, artistInfo, dateProduced, size, artMedium, valuation, openingBid, currentBidValue,closingDate, lot, highestBidder });
     },
 
     removeAuctionItem: async(parent, { auctionItemId }) =>{
