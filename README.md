@@ -1,5 +1,5 @@
 
-# Interrobang Auction House
+# ‽Interrobang Auction House
 ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
 
 
@@ -10,7 +10,6 @@
 - [Usage](#usage)
 - [Application](#application)
 - [images](#images)
-- [Tests](#tests)
 - [questions](#questions)
 - [Contributing](#contributing)
 - [License](#license)
@@ -33,7 +32,9 @@ Follow these steps to install this project on your local machine.
 - mkdir Interrobang-Auction-House
 - cd Interrobang-Auction-House
 - git clone https://github.com/RGarrettLee/Interrobang-Auction-House.git
-- npm i
+- npm install
+- npm run seed
+- npm run develop
 
 
 ## Usage
@@ -46,21 +47,18 @@ Follow these steps to install this project on your local machine.
 
 
 ## Images
-- -![Interrobang Auction House](./public/images/interrobang-auction-house.png)
-
-## Tests
-- node run test
-
+- -![Interrobang Auction House](./client/src/components/images/interrobang-auction-house.png)
 
 ## Questions
-- Username: Dlittlefield81
-- GitHub: https://github.com/DLittlefield81/
-- Email: Littlefield.Dennis@outlook.com
+- Contact our team if you have any questions.
+- https://github.com/RGarrettLee/
+- https://github.com/SachMilan
+- https://github.com/DLittlefield81/
 
 
 ## Contributing
 - If you would like to contribute...
-- Email Me
+- Email Us
 
 
 ## License
