@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { SwiperCard } from '../index';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import Images from '../../images/projects/index';
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
