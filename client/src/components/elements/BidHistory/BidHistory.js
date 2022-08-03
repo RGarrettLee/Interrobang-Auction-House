@@ -9,14 +9,14 @@ function Component(props) {
     case 'LostBid':
       return <Button color="primary" variant="contained">Closed</Button>
     case 'IncreaseBid':
-      return <span><Button color="secondary" variant="contained">Increase Bid</Button></span>
+      return <Button color="secondary" variant="contained">Increase Bid</Button>
     default:
       return  <Button color="secondary" variant="contained">View Details</Button>
 }}
 
 const BidHistory = (props) => {
   return (
-    <div className="container">
+    <div className="container p-2">
       <div className="row">
       <div className="col">
           <Typography fontFamily="Montserrat Alternates">$props.closingDate</Typography>

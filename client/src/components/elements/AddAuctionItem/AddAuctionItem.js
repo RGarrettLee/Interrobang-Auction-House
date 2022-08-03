@@ -91,7 +91,7 @@ const AddAuctionItem = () => {
       <TextField id="currentBid" label="Current Bid Value" variant="filled"  />
       <br />
       <Typography>Image Upload<hr /></Typography>
-      <Box component="div" sx={{
+      <Box className="text-center justify-center p-2" component="div" sx={{
         display: 'flex',
         justifyContent: 'center',
         p: 1,

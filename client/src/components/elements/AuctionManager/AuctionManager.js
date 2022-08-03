@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, AppBar, Toolbar, Typography } from '@mui/material'
 
 const AuctionManager = (props) => {
-  const isBidOpen = true;
+  let isBidOpen = true;
   return (
     <div className="container p-2">
       <div className="row">
