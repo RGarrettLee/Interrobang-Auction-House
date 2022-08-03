@@ -13,16 +13,14 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_USER = gql`
-  mutation AddUser($firstName: String!, $lastName: String!, $email: String!, $password: String!) {
-  addUser(FirstName: $firstName, LastName: $lastName, Email: $email, Password: $password) {
-    user {
-      FirstName
-      LastName
-      Email
-      Password
+  mutation AddUser($email: String!, $password: String!) {
+    addUser(Email: $email, Password: $password) {
+      user {
+        Email
+        Password
+      }
     }
   }
-}
 `;
 
 export const ADD_AUCTIONITEM = gql`

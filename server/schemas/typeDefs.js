@@ -46,7 +46,7 @@ const typeDefs = gql`
 
   }
   type Mutation {
-    addUser(FirstName: String!, LastName: String!, Email: String!, Password: String!): Auth
+    addUser(Email: String!, Password: String!): Auth
     login(email: String!, password: String!): Auth
     addAuctionItem(name: String!, images: String!, itemDescription: String!,artistName: String!, origin: String!, artistInfo: String, dateProduced: String, size: String, artMedium:String, valuation:Int, openingBid:Int, closingBidValue:Int, closingDate:String, lot:Int, highestBidder: Int!):auctionItem
     updateUser(FirstName: String!, LastName: String!,Email: String!, Password: String!, Address: String!,City: String!,Province: String!,ZipCode:String,Phone: Int): Auth

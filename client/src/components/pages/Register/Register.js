@@ -6,8 +6,6 @@ import Auth from '../../../utils/auth';
 
 const Register = (e) => {
     const[formState, setFormState] = useState({
-        firstname:'',
-        lastname:'',
         email:'',
         password:'',
     });
@@ -24,14 +22,15 @@ const Register = (e) => {
 
     const handleFormSubmit = async (event) =>{
         event.preventDefault();
-        console.log(formState);
 
         try{
+            console.log('something');
+            console.log(formState);
             const {data} = await addUser({
-            variables:{...formState},
+              variables: {...formState},
             });
 
-            Auth.login(data.addUser.token);
+            Auth.login(data.login.token);
         } catch(e){
             console.log(e);
         }
@@ -60,26 +59,9 @@ return(
         <form onSubmit={handleFormSubmit}>
           <input
             className="form-input"
-            placeholder="first name"
-            name="firstname"
-            type="text"
-            value={formState.firstname}
-            onChange={handleChange}
-          />
-          <input
-            className="form-input"
-            placeholder="lastname"
-            name="lastname"
-            type="text"
-            value={formState.lastname}
-            onChange={handleChange}
-          />
-          <input
-            className="form-input"
             placeholder="Your email"
             name="email"
             type="email"
-            value={formState.email}
             onChange={handleChange}
           />
           <input
@@ -87,7 +69,6 @@ return(
             placeholder="******"
             name="password"
             type="password"
-            value={formState.password}
             onChange={handleChange}
           />
           <button
@@ -103,6 +84,7 @@ return(
       {error && (
         <div className="my-3 p-3 bg-danger text-white">
           {error.message}
+          {console.log(JSON.stringify(error, null, 2))}
         </div>
       )}
     </div>
