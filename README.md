@@ -47,7 +47,7 @@ Follow these steps to install this project on your local machine.
 
 
 ## Images
-- -![Interrobang Auction House](./client/src/components/images/interrobang-auction-house.png)
+- ![Interrobang Auction House](./client/src/components/images/interrobang-auction-house.png)
 
 ## Questions
 - Contact our team if you have any questions.
