@@ -58,7 +58,7 @@ Follow these steps to install this project on your local machine.
 
 ## Contributing
 - If you would like to contribute...
-- Email Us
+- Email Us hello@
 
 
 ## License
